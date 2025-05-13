@@ -149,7 +149,7 @@ h3 { font-size: 1.5rem; }
   return (
     <div
       ref={containerRef}
-      className="w-full h-[500px] rounded-xl border-[10px] border-gray-500 relative overflow-hidden"
+      className="w-full h-[500px] rounded-xl md:rounded-2xl border-[10px] border-gray-200 dark:border-zinc-700  relative overflow-hidden"
       onMouseMove={handleMouseMove}
     >
       {/* Website Image (Left Side) */}
