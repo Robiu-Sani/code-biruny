@@ -143,7 +143,7 @@ export default function Global() {
                 Global Connectivity
               </Badge>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              <h1 className="text-4xl md:text-5xl text-center lg:text-left lg:text-6xl font-bold tracking-tight">
                 Building{" "}
                 <span className="text-zinc-900 dark:text-white">
                   Digital Bridges
@@ -151,7 +151,7 @@ export default function Global() {
                 Worldwide
               </h1>
 
-              <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-lg">
+              <p className="text-lg text-center lg:text-left text-zinc-600 dark:text-zinc-400 max-w-lg">
                 Code Biruny creates seamless digital experiences that connect
                 businesses across continents with cutting-edge technology and
                 innovative solutions.

@@ -1,0 +1,39 @@
+.homeAboutScroll {
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  margin: auto;
+  animation: scrollAnimation1 linear;
+  animation-timeline: view();
+  /* animation-fill-mode: forwards; */
+}
+
+/* Fallback for browsers that don't support animation-timeline */
+@supports not (animation-timeline: view()) {
+  .homeAboutScroll {
+    animation: scrollAnimation1 2s ease-in-out forwards;
+  }
+}
+
+@keyframes scrollAnimation1 {
+  0% {
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    transform: translateY(300px);
+  }
+
+  10% {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transform: translateY(300px);
+  }
+
+  50% {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0%;
+    transform: translateY(0);
+  }
+}
