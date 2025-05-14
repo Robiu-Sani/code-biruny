@@ -1,8 +1,9 @@
-import { Code, Rocket, Sparkles } from "lucide-react";
+import { Rocket, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export default function FourthSection() {
   return (
-    <div className="w-full py-10 relative">
+    <div className="w-full py-10 px-2 relative">
       {/* Main container with animated RGB border */}
       <div className="container mx-auto rounded-xl bg-gray-50 dark:bg-zinc-900 grid grid-cols-1 md:grid-cols-2 gap-5 md:rounded-2xl p-5 lg:p-10 relative">
         {/* Animated RGB border */}
@@ -13,11 +14,12 @@ export default function FourthSection() {
 
         {/* Text content box */}
         <div className="flex justify-between items-start gap-6 flex-col z-10">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="p-3 bg-primary/10 rounded-lg text-primary">
-              <Rocket className="w-8 h-8" strokeWidth={1.5} />
+          <div className="flex flex-col gap-4 mb-6">
+            <div className="p-3  rounded-lg text-primary">
+              <Rocket className="w-14 h-14" strokeWidth={1.5} />
             </div>
-            <h2 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+            {/* bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent */}
+            <h2 className="text-3xl font-bold tracking-tight">
               Why Choose Code-Biruny?
             </h2>
           </div>
@@ -53,31 +55,23 @@ export default function FourthSection() {
         {/* Visual box */}
         <div className="relative z-10">
           <div className="relative h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden bg-gradient-to-br from-gray-200/50 to-gray-300/30 dark:from-zinc-800/70 dark:to-zinc-900/50 border border-gray-200 dark:border-zinc-700/50">
-            {/* Animated visual element */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-64 h-64">
-                {/* Code icon with animation */}
-                <Code className="absolute inset-0 w-full h-full text-primary/10 dark:text-primary/5" />
-
-                {/* Pulsing circle animation */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="absolute inset-0 rounded-full bg-primary/10 animate-ping opacity-75"></div>
-                  <div className="relative w-32 h-32 rounded-full bg-primary/5 flex items-center justify-center">
-                    <Code
-                      className="w-16 h-16 text-primary"
-                      strokeWidth={1.5}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating elements */}
-            <div className="absolute top-10 left-10 w-12 h-12 rounded-lg bg-primary/5 border border-primary/10 animate-float"></div>
-            <div className="absolute bottom-16 right-12 w-8 h-8 rounded-full bg-purple-500/10 border border-purple-500/20 animate-float-delay"></div>
-            <div className="absolute top-20 right-20 w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 animate-float-delay-2"></div>
+            {/* Animated visual element whychoesus */}
+            <Image
+              src={`/whychoesus.png`}
+              alt="code biruny why choes us image"
+              width={800}
+              height={800}
+              className="w-full h-full"
+            />
           </div>
         </div>
+      </div>
+
+      {/* card section  */}
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div className="w-full border p-4 md:p-6"></div>
+        <div className="w-full border p-4 md:p-6"></div>
+        <div className="w-full border p-4 md:p-6"></div>
       </div>
     </div>
   );

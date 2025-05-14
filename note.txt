@@ -1,0 +1,23 @@
+   <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-64 h-64">
+                {/* Code icon with animation */}
+                <Code className="absolute inset-0 w-full h-full text-primary/10 dark:text-primary/5" />
+
+                {/* Pulsing circle animation */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute inset-0 rounded-full bg-primary/10 animate-ping opacity-75"></div>
+                  <div className="relative w-32 h-32 rounded-full bg-primary/5 flex items-center justify-center">
+                    <Code
+                      className="w-16 h-16 text-primary"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating elements */}
+            <div className="absolute top-10 left-10 w-12 h-12 rounded-lg bg-primary/5 border border-primary/10 animate-float"></div>
+            <div className="absolute bottom-16 right-12 w-8 h-8 rounded-full bg-purple-500/10 border border-purple-500/20 animate-float-delay"></div>
+            <div className="absolute top-20 right-20 w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 animate-float-delay-2"></div>
+         
