@@ -1,6 +1,40 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@keyframes border-spin {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-border-spin {
+  background-size: 300% 300%;
+  animation: border-spin 4s linear infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-delay {
+  animation: float 7s ease-in-out 1s infinite;
+}
+.animate-float-delay-2 {
+  animation: float 5s ease-in-out 2s infinite;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
