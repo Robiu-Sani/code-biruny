@@ -1,6 +1,7 @@
 // import { Button } from "@/components/ui/button";
 import HomeAbout from "./home/HomeAbout";
 import SecendSection from "./home/SecendSection";
+import ThirdSection from "./home/ThirdSection";
 import Global from "./setup/Global";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       {/* <Button>click</Button> */}
       <Global />
       <SecendSection />
+      <ThirdSection />
       <HomeAbout />
     </div>
   );
