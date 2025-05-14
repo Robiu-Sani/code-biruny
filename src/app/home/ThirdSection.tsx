@@ -4,11 +4,7 @@ import React from "react";
 export default function ThirdSection() {
   return (
     <div>
-      <TextHoverEffect
-        text="Responsive Text"
-        duration={0.2}
-        className="my-4 mx-auto"
-      />
+      <TextHoverEffect text="CODE BIRUNY" duration={0.2} />
     </div>
   );
 }
