@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HomeNav from "./default/home-nav/HomeNav";
 import { ThemeProvider } from "next-themes";
+import HomeFooter from "./default/Footer/HomeFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -174,6 +175,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <HomeNav />
           {children}
+          <HomeFooter />
         </ThemeProvider>
       </body>
     </html>
