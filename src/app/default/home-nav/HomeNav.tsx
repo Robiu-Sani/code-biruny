@@ -18,6 +18,7 @@ import { AnimatePresence, motion } from "framer-motion";
 // import { cn } from "@/lib/utils";
 import { VscAzure, VscServerEnvironment, VscCode } from "react-icons/vsc";
 import { FiLayers, FiUsers, FiMail } from "react-icons/fi";
+import Image from "next/image";
 
 export default function HomeNav() {
   const { theme, setTheme } = useTheme();
@@ -100,17 +101,13 @@ export default function HomeNav() {
         {/* Logo and Main Nav */}
         <div className="flex items-center gap-10">
           <Link href="/" className="flex items-center gap-2">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="dark:invert"
-            >
-              <rect width="32" height="32" rx="8" fill="#2563EB" />
-              <path d="M16 8L22 16L16 24L10 16L16 8Z" fill="white" />
-            </svg>
+            <Image
+              src={`/logo.jpg`}
+              alt="code-biruny logo"
+              width={50}
+              height={50}
+              className="w-8 h-8 rounded-md"
+            />
             <span className="font-bold text-xl">Code Biruny</span>
           </Link>
 
