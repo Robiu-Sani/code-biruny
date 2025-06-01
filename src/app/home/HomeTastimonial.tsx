@@ -84,7 +84,7 @@ export default function HomeTestimonial() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 ">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 text-sm font-medium tracking-wider text-primary uppercase rounded-full bg-primary/10 mb-4">
