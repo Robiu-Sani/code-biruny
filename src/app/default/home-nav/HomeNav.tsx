@@ -10,7 +10,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, Search, ChevronDown, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -19,12 +18,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { VscAzure, VscServerEnvironment, VscCode } from "react-icons/vsc";
 import { FiLayers, FiUsers, FiMail } from "react-icons/fi";
 import Image from "next/image";
+import SearchBox from "../SearchBox";
 
 export default function HomeNav() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Ensure theme is only applied after mounting to avoid hydration mismatch
@@ -97,6 +96,7 @@ export default function HomeNav() {
 
   return (
     <nav className="fixed z-[500] w-full top-0 bg-background/80 backdrop-blur-sm border-b">
+      {searchOpen && <SearchBox toggleSearch={toggleSearch} />}
       <div className="container flex justify-between items-center mx-auto px-4 py-3">
         {/* Logo and Main Nav */}
         <div className="flex items-center gap-10">
@@ -200,24 +200,6 @@ export default function HomeNav() {
         <div className="flex items-center gap-4">
           {/* Search */}
           <div className="relative">
-            <AnimatePresence>
-              {searchOpen && (
-                <motion.div
-                  initial={{ opacity: 0, width: 0 }}
-                  animate={{ opacity: 1, width: 200 }}
-                  exit={{ opacity: 0, width: 0 }}
-                  className="absolute right-0 top-1/2 -translate-y-1/2"
-                >
-                  <Input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="h-8 pr-8"
-                  />
-                </motion.div>
-              )}
-            </AnimatePresence>
             <Button
               variant="ghost"
               size="icon"

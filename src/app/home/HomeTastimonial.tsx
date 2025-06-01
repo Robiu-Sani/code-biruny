@@ -90,11 +90,11 @@ export default function HomeTestimonial() {
           <span className="inline-block px-4 py-1 text-sm font-medium tracking-wider text-primary uppercase rounded-full bg-primary/10 mb-4">
             Client Voices
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-200 mb-4">
             Success Stories with{" "}
             <span className="text-primary">Code Biruny</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
             Trusted by innovators who`ve transformed their businesses with our
             solutions
           </p>
@@ -142,7 +142,7 @@ export default function HomeTestimonial() {
                   </div>
 
                   {/* Testimonial text */}
-                  <blockquote className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-3xl">
+                  <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed max-w-3xl">
                     <span className="text-primary text-4xl font-serif leading-none">{`"`}</span>
                     {testimonials[currentIndex].content}
                     <span className="text-primary text-4xl font-serif leading-none">{`"`}</span>
@@ -150,7 +150,7 @@ export default function HomeTestimonial() {
 
                   {/* Client info */}
                   <div>
-                    <p className="font-bold text-gray-900 text-lg">
+                    <p className="font-bold text-gray-900 dark:text-gray-100 text-lg">
                       {testimonials[currentIndex].name}
                     </p>
                     <p className="text-primary text-sm font-medium">
