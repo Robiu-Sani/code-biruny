@@ -51,6 +51,39 @@
   animation: border-spin 4s linear infinite;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.hover\:shadow-lg {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
