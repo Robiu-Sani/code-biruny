@@ -11,7 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Search, ChevronDown, Menu, X } from "lucide-react";
+import { Moon, Sun, Search, ChevronDown, Menu, X, Linkedin } from "lucide-react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
 // import { cn } from "@/lib/utils";
@@ -233,7 +233,15 @@ export default function HomeNav() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              <Linkedin />
+            </Link>
+          </Button>
+          <Button variant="ghost" size="sm" asChild>
+            <Link
+              href="/pages/login"
+              rel="noopener noreferrer"
+            >
+              Login
             </Link>
           </Button>
 
