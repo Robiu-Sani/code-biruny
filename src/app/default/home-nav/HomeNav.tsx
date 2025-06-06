@@ -11,7 +11,15 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Search, ChevronDown, Menu, X, Linkedin } from "lucide-react";
+import {
+  Moon,
+  Sun,
+  Search,
+  ChevronDown,
+  Menu,
+  X,
+  Linkedin,
+} from "lucide-react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
 // import { cn } from "@/lib/utils";
@@ -108,7 +116,9 @@ export default function HomeNav() {
               height={50}
               className="w-8 h-8 rounded-md"
             />
-            <span className="font-bold text-xl">Code Biruny</span>
+            <span className="font-bold hidden sm:block text-xl">
+              Code Biruny
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -237,10 +247,7 @@ export default function HomeNav() {
             </Link>
           </Button>
           <Button variant="ghost" size="sm" asChild>
-            <Link
-              href="/pages/login"
-              rel="noopener noreferrer"
-            >
+            <Link href="/pages/login" rel="noopener noreferrer">
               Login
             </Link>
           </Button>
