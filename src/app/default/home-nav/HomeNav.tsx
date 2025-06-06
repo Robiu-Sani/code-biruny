@@ -19,10 +19,11 @@ import {
   Menu,
   X,
   Linkedin,
+  Album,
+  TabletSmartphone,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
-// import { cn } from "@/lib/utils";
 import { VscAzure, VscServerEnvironment, VscCode } from "react-icons/vsc";
 import { FiLayers, FiUsers, FiMail } from "react-icons/fi";
 import Image from "next/image";
@@ -51,25 +52,31 @@ export default function HomeNav() {
   const servicesItems = [
     {
       title: "Full-Stack Development",
-      href: "/services/fullstack",
+      href: "/pages/services/fullstack",
       description: "End-to-end web application development",
       icon: <VscCode className="h-5 w-5" />,
     },
     {
       title: "MERN Stack Solutions",
-      href: "/services/mern",
+      href: "/pages/services/mern",
       description: "MongoDB, Express, React, Node.js",
       icon: <VscServerEnvironment className="h-5 w-5" />,
     },
     {
       title: "Enterprise Software",
-      href: "/services/enterprise",
+      href: "/pages/services/enterprise",
       description: "Custom business solutions",
       icon: <VscAzure className="h-5 w-5" />,
     },
     {
+      title: "Mobile App Development",
+      href: "/pages/services/mobile",
+      description: "User-friendly mobile applications",
+      icon: <TabletSmartphone className="h-5 w-5" />,
+    },
+    {
       title: "UI/UX Design",
-      href: "/services/design",
+      href: "/pages/services/design",
       description: "Beautiful, intuitive interfaces",
       icon: <FiLayers className="h-5 w-5" />,
     },
@@ -78,25 +85,25 @@ export default function HomeNav() {
   const companyItems = [
     {
       title: "About Us",
-      href: "/about",
+      href: "/pages/company/about",
       description: "Our story, mission, and values",
       icon: <FiUsers className="h-5 w-5" />,
     },
     {
       title: "Our Team",
-      href: "/team",
+      href: "/pages/company/team",
       description: "Meet the talented people",
       icon: <FiUsers className="h-5 w-5" />,
     },
     {
       title: "Careers",
-      href: "/careers",
+      href: "/pages/company/careers",
       description: "Join our growing team",
       icon: <FiUsers className="h-5 w-5" />,
     },
     {
       title: "Contact",
-      href: "/contact",
+      href: "/pages/company/contact",
       description: "Get in touch with us",
       icon: <FiMail className="h-5 w-5" />,
     },
@@ -140,9 +147,9 @@ export default function HomeNav() {
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
                     <div className="row-span-4">
-                      <NavigationMenuLink asChild>
+                      <NavigationMenuLink href={`/pages/services/our-services`}>
                         <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-                          <VscCode className="h-10 w-10" />
+                          <Album className="h-32 w-32" />
                           <div className="mb-2 mt-4 text-lg font-medium">
                             Our Services
                           </div>
@@ -196,7 +203,7 @@ export default function HomeNav() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link href="/blog">
+                <Link href="/pages/blog">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Blog
                   </NavigationMenuLink>

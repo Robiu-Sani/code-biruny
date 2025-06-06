@@ -43,15 +43,23 @@ export default function HomeFooter() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/services/fullstack"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
-                    Web Development
+                    Full-Stack Web Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/services/mern"
+                    className="text-sm text-muted-foreground hover:text-primary"
+                  >
+                    Mern-Stack Web Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/pages/services/mobile"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Mobile Apps
@@ -59,7 +67,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/up-coming"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Cloud Solutions
@@ -67,7 +75,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/services/design"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     UI/UX Design
@@ -82,7 +90,7 @@ export default function HomeFooter() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/company/about"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     About Us
@@ -90,7 +98,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/company/careers"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Careers
@@ -98,7 +106,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/blog"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Blog
@@ -106,7 +114,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/pages/company/contact"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Contact
@@ -121,7 +129,7 @@ export default function HomeFooter() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/documentation"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Documentation
@@ -129,7 +137,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/case-studies"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Case Studies
@@ -137,7 +145,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/support"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Support
@@ -145,7 +153,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/community"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Community
@@ -160,7 +168,7 @@ export default function HomeFooter() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/privacy-policy"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Privacy Policy
@@ -168,7 +176,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/terms-of-service"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Terms of Service
@@ -176,7 +184,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/footer/refund-policy"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Cookie Policy
@@ -195,7 +203,7 @@ export default function HomeFooter() {
                 alt="Code Biruny Logo"
                 width={32}
                 height={32}
-                className=" mr-2"
+                className=" mr-2 rounded-md"
               />
               <span className="font-semibold">Code Biruny</span>
             </div>
