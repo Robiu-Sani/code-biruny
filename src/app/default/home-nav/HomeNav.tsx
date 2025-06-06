@@ -21,6 +21,7 @@ import {
   Linkedin,
   Album,
   TabletSmartphone,
+  FolderOpenDot,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
@@ -61,6 +62,12 @@ export default function HomeNav() {
       href: "/pages/services/mern",
       description: "MongoDB, Express, React, Node.js",
       icon: <VscServerEnvironment className="h-5 w-5" />,
+    },
+    {
+      title: "Project Management",
+      href: "/pages/services/project-management",
+      description: "Efficient project planning and execution",
+      icon: <FolderOpenDot className="h-5 w-5" />,
     },
     {
       title: "Enterprise Software",
