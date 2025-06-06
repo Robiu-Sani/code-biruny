@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import {
@@ -13,20 +12,32 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import SocialAuth from "../_SocialAuth/SocialSuth";
+import { useEffect, useState } from "react";
 
-export default function LoginPage() {
+export default function SignupPage() {
+  const [confirmPasswordFocused, setConfirmPasswordFocused] = useState(false);
+  const [passwordsMatch, setPasswordsMatch] = useState<boolean | null>(null);
   const form = useForm({
     defaultValues: {
       email: "",
       password: "",
-      remember: false,
+      confirmPassword: "",
     },
   });
+
+  const watchPassword = form.watch("password");
+  const watchConfirmPassword = form.watch("confirmPassword");
+
+  useEffect(() => {
+    if (confirmPasswordFocused && watchConfirmPassword) {
+      setPasswordsMatch(watchPassword === watchConfirmPassword);
+    }
+  }, [watchPassword, watchConfirmPassword, confirmPasswordFocused]);
 
   function onSubmit(data: {
     email: string;
     password: string;
-    remember: boolean;
+    confirmPassword: string;
   }) {
     console.log("Login form submitted:", data);
     // Add your login logic here
@@ -38,11 +49,9 @@ export default function LoginPage() {
         <div className=" sm:shadow-md rounded-lg sm:p-8 p-4 space-y-6 sm:border border-gray-200 dark:border-gray-700">
           <Form {...form}>
             <div className="text-center">
-              <h1 className="text-2xl text-center font-bold ">
-                Welcome to Code Biruny
-              </h1>
+              <h1 className="text-3xl text-center font-bold ">Code Biruny</h1>
               <p className="mt-2 text-sm text-center">
-                Stay with us and enjoy your life in the digital world
+                Stay with us and enjoy your life in the digital world!
               </p>
             </div>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -73,15 +82,7 @@ export default function LoginPage() {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <div className="flex items-center justify-between">
-                        <FormLabel>Password</FormLabel>
-                        <Link
-                          href="/pages/forget-password"
-                          className="text-sm font-medium text-primary hover:underline"
-                        >
-                          Forgot password?
-                        </Link>
-                      </div>
+                      <FormLabel>Password</FormLabel>
                       <FormControl>
                         <Input
                           placeholder="••••••••"
@@ -91,27 +92,51 @@ export default function LoginPage() {
                         />
                       </FormControl>
                       <FormMessage />
+                      <div className="text-xs text-muted-foreground mt-1">
+                        Must be at least 8 characters with 1 uppercase and 1
+                        number
+                      </div>
                     </FormItem>
                   )}
                 />
 
-                {/* Remember Me Checkbox */}
+                {/* Confirm Password Field */}
                 <FormField
                   control={form.control}
-                  name="remember"
+                  name="confirmPassword"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                    <FormItem>
+                      <FormLabel>Confirm Password</FormLabel>
                       <FormControl>
-                        <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                        <Input
+                          placeholder="••••••••"
+                          type="password"
+                          {...field}
+                          className={`h-11 ${
+                            confirmPasswordFocused
+                              ? passwordsMatch === false
+                                ? "border-red-500 focus-visible:ring-red-500"
+                                : passwordsMatch === true
+                                ? "border-green-500 focus-visible:ring-green-500"
+                                : ""
+                              : ""
+                          }`}
+                          onFocus={() => setConfirmPasswordFocused(true)}
+                          onBlur={() => setConfirmPasswordFocused(false)}
                         />
                       </FormControl>
-                      <div className="space-y-1 leading-none">
-                        <FormLabel className="cursor-pointer">
-                          Remember me
-                        </FormLabel>
-                      </div>
+                      <FormMessage />
+                      {confirmPasswordFocused && passwordsMatch !== null && (
+                        <p
+                          className={`text-xs mt-1 ${
+                            passwordsMatch ? "text-green-600" : "text-red-600"
+                          }`}
+                        >
+                          {passwordsMatch
+                            ? "Passwords match!"
+                            : "Passwords do not match"}
+                        </p>
+                      )}
                     </FormItem>
                   )}
                 />
@@ -119,19 +144,19 @@ export default function LoginPage() {
 
               {/* Login Button */}
               <Button type="submit" className="w-full h-11">
-                Sign In
+                Sign Up
               </Button>
             </form>
           </Form>
 
           {/* Sign Up Link */}
           <div className="text-center text-sm text-gray-600">
-            Don`t have an account?{" "}
+            have an account?{" "}
             <Link
-              href="/pages/signup"
+              href="/pages/login"
               className="font-medium text-primary hover:underline"
             >
-              Sign up
+              Sign In
             </Link>
           </div>
           <SocialAuth />
