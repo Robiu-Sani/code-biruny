@@ -34,7 +34,7 @@ export default function LoginPage() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center  sm:not-only:p-4">
       <div className="w-full max-w-md space-y-8">
-        <div className=" shadow-md rounded-lg p-8 space-y-6 border border-gray-200 dark:border-gray-700">
+        <div className=" sm:shadow-md rounded-lg sm:p-8 p-4 space-y-6 sm:border border-gray-200 dark:border-gray-700">
           <Form {...form}>
             <div className="text-center">
               <h1 className="text-3xl text-center font-bold ">
