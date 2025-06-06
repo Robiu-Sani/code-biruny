@@ -8,7 +8,7 @@ import Global from "./setup/Global";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full pt-14 md:pt-0">
       {/* <Button>click</Button> */}
       <Global />
       <SecendSection />
