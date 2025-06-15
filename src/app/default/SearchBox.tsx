@@ -51,7 +51,7 @@ export default function SearchBox({
   return (
     <div
       onClick={toggleSearch}
-      className="fixed inset-0 z-[501] bg-background/80 backdrop-blur-sm flex justify-center items-start pt-20 px-4"
+      className="fixed inset-0 z-[999999] bg-background/80 backdrop-blur-sm flex justify-center items-start pt-20 px-4"
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -84,7 +84,7 @@ export default function SearchBox({
         <div>
           {(searchQuery || isFocused) && (
             <div className="overflow-hidden">
-              <div className="p-4 border-t border-gray-200 dark:border-gray-800 max-h-[60vh] overflow-y-auto">
+              <div className="p-4 border-t border-gray-200 dark:border-gray-800  h-full sm:max-h-[60vh] overflow-y-auto">
                 {filteredResults.length > 0 ? (
                   <div className="space-y-2">
                     {filteredResults.map((item) => (
