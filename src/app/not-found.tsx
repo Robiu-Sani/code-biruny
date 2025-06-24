@@ -52,6 +52,7 @@ const NotFound: React.FC = () => {
     const jumpPower = -12;
     const cactusSpeed = 5;
     const groundY = canvas.height - 50;
+    const dinoHeight = 30; // Height of the dinosaur image
 
     const handleJump = () => {
       if (gameState.dinoY <= 0 && !gameState.isGameOver) {
@@ -79,36 +80,41 @@ const NotFound: React.FC = () => {
 
     const gameLoop = () => {
       setGameState((prev) => {
+        if (prev.isGameOver && !gameState.isGameOver) return prev; // Only update if not game over or restarting
+
         let newDinoY = prev.dinoY + prev.dinoVelocity;
         let newVelocity = prev.dinoVelocity + gravity;
 
-        // Ensure dino stays above ground
-        if (newDinoY > 0) {
-          newDinoY = 0;
-          newVelocity = 0;
+        // Ensure dino stays on or above ground
+        const dinoBottom = groundY - dinoHeight + newDinoY;
+        if (dinoBottom >= groundY) {
+          newDinoY = 0; // Reset to ground level
+          newVelocity = 0; // Stop falling
         }
 
         let newCacti = prev.cacti.map((cactus) => ({
-          x: cactus.x - cactusSpeed,
+          x: cactus.x - (prev.isGameOver ? 0 : cactusSpeed),
         }));
         newCacti = newCacti.filter((cactus) => cactus.x > -20);
 
         // Collision detection
         let isGameOver = prev.isGameOver;
-        newCacti.forEach((cactus) => {
-          if (cactus.x < 70 && cactus.x > 20 && newDinoY > -20) {
-            isGameOver = true;
-            if (prev.score > prev.highScore) {
-              localStorage.setItem("dinoHighScore", prev.score.toString());
+        if (!isGameOver) {
+          newCacti.forEach((cactus) => {
+            if (cactus.x < 70 && cactus.x > 20 && newDinoY > -20) {
+              isGameOver = true;
+              if (prev.score > prev.highScore) {
+                localStorage.setItem("dinoHighScore", prev.score.toString());
+              }
             }
-          }
-        });
+          });
+        }
 
         // Update score
-        const newScore = prev.score + 1;
+        const newScore = prev.isGameOver ? prev.score : prev.score + 1;
 
-        // Spawn new cactus
-        if (Math.random() < 0.02 && newCacti.length < 3) {
+        // Spawn new cactus only if not game over
+        if (!prev.isGameOver && Math.random() < 0.02 && newCacti.length < 3) {
           spawnCactus();
         }
 
@@ -132,7 +138,13 @@ const NotFound: React.FC = () => {
 
       // Draw dino (only if image is loaded)
       if (dinoImg.complete) {
-        ctx.drawImage(dinoImg, 50, groundY - 30 - gameState.dinoY, 30, 30);
+        ctx.drawImage(
+          dinoImg,
+          50,
+          groundY - dinoHeight + gameState.dinoY,
+          30,
+          dinoHeight
+        );
       }
 
       // Draw cacti (only if image is loaded)
