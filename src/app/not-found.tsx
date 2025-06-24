@@ -93,7 +93,7 @@ const NotFound: React.FC = () => {
         newCacti = newCacti.filter((cactus) => cactus.x > -20);
 
         // Collision detection
-        let isGameOver = prev.isGameOver;
+        let isGameOver: boolean = prev.isGameOver;
         newCacti.forEach((cactus) => {
           if (cactus.x < 70 && cactus.x > 20 && newDinoY > -20) {
             isGameOver = true;
