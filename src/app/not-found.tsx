@@ -175,7 +175,7 @@ const NotFound: React.FC = () => {
   }, [gameState]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex fixed top-0 left-0 z-[9999999999] bg-white flex-col items-center justify-center min-h-screen">
       <h1 className="text-4xl font-bold mb-4">
         404 - Page Not Found | Code Biruny
       </h1>
