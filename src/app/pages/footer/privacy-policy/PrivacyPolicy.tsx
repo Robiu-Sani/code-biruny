@@ -22,8 +22,8 @@ import { Separator } from "@/components/ui/separator";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-zinc-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-zinc-50 py-12 mt-5 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto">
         <Button
           variant="ghost"
           className="mb-6 text-zinc-600 hover:text-zinc-900"
