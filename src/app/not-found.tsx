@@ -43,9 +43,9 @@ const NotFound: React.FC = () => {
     }
 
     const dinoImg = new Image();
-    dinoImg.src = "/dino.png"; // Placeholder path, replace with your image
+    dinoImg.src = "/dino.png"; // Ensure this path is correct
     const cactusImg = new Image();
-    cactusImg.src = "/cactus.png"; // Placeholder path, replace with your image
+    cactusImg.src = "/cactus.png"; // Ensure this path is correct
 
     let animationFrameId: number;
     const gravity = 0.5;
@@ -79,13 +79,14 @@ const NotFound: React.FC = () => {
 
     const gameLoop = () => {
       setGameState((prev) => {
-        if (prev.isGameOver) return prev;
-
-        // Update dino position
         let newDinoY = prev.dinoY + prev.dinoVelocity;
         let newVelocity = prev.dinoVelocity + gravity;
-        newDinoY = Math.max(0, newDinoY); // Ensure dino doesn't go below ground
-        newVelocity = newDinoY === 0 ? 0 : newVelocity; // Reset velocity when hitting ground
+
+        // Ensure dino stays above ground
+        if (newDinoY > 0) {
+          newDinoY = 0;
+          newVelocity = 0;
+        }
 
         let newCacti = prev.cacti.map((cactus) => ({
           x: cactus.x - cactusSpeed,
@@ -93,7 +94,7 @@ const NotFound: React.FC = () => {
         newCacti = newCacti.filter((cactus) => cactus.x > -20);
 
         // Collision detection
-        let isGameOver: boolean = prev.isGameOver;
+        let isGameOver = prev.isGameOver;
         newCacti.forEach((cactus) => {
           if (cactus.x < 70 && cactus.x > 20 && newDinoY > -20) {
             isGameOver = true;
@@ -129,13 +130,17 @@ const NotFound: React.FC = () => {
       ctx.fillStyle = "#000";
       ctx.fillRect(0, groundY, canvas.width, 2);
 
-      // Draw dino
-      ctx.drawImage(dinoImg, 50, groundY - 30 - gameState.dinoY, 30, 30);
+      // Draw dino (only if image is loaded)
+      if (dinoImg.complete) {
+        ctx.drawImage(dinoImg, 50, groundY - 30 - gameState.dinoY, 30, 30);
+      }
 
-      // Draw cacti
-      gameState.cacti.forEach((cactus) => {
-        ctx.drawImage(cactusImg, cactus.x, groundY - 20, 20, 20);
-      });
+      // Draw cacti (only if image is loaded)
+      if (cactusImg.complete) {
+        gameState.cacti.forEach((cactus) => {
+          ctx.drawImage(cactusImg, cactus.x, groundY - 20, 20, 20);
+        });
+      }
 
       // Draw score
       ctx.font = "20px Arial";
@@ -155,8 +160,20 @@ const NotFound: React.FC = () => {
       animationFrameId = requestAnimationFrame(gameLoop);
     };
 
-    // Start game loop
-    animationFrameId = requestAnimationFrame(gameLoop);
+    // Wait for images to load before starting the game loop
+    const startGame = () => {
+      if (dinoImg.complete && cactusImg.complete) {
+        animationFrameId = requestAnimationFrame(gameLoop);
+      } else {
+        dinoImg.onload = () => {
+          if (cactusImg.complete) startGame();
+        };
+        cactusImg.onload = () => {
+          if (dinoImg.complete) startGame();
+        };
+      }
+    };
+    startGame();
 
     // Event listeners
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -196,7 +213,7 @@ const NotFound: React.FC = () => {
         ref={canvasRef}
         width={800}
         height={400}
-        className="border border-black mb-4"
+        className="border border-gray-500 rounded-md mb-4"
       />
       <p className="mb-4">
         Press <strong>Space</strong> to jump or restart
