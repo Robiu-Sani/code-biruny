@@ -17,20 +17,17 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-zinc-50 py-12 mt-5 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        <Button
-          variant="ghost"
-          className="mb-6 text-zinc-600 hover:text-zinc-900"
-        >
+        <Link href={`/`} className="mb-6 text-zinc-600 hover:text-zinc-900">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Home
-        </Button>
+        </Link>
 
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
