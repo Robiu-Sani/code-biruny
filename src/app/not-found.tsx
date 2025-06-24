@@ -89,16 +89,16 @@ const NotFound: React.FC = () => {
         let newDinoY = prev.dinoY;
         let newVelocity = prev.dinoVelocity;
 
-        // Apply gravity and jump only if triggered
+        // Apply gravity and jump only if triggered or in mid-jump
         if (isJumpTriggered || prev.dinoVelocity !== 0) {
           newDinoY = prev.dinoY + prev.dinoVelocity;
           newVelocity = prev.dinoVelocity + gravity;
 
-          // Ensure dino stays on or above ground
+          // Ensure dino lands on ground
           const dinoBottom = groundY - dinoHeight + newDinoY;
           if (dinoBottom >= groundY) {
-            newDinoY = 0;
-            newVelocity = 0;
+            newDinoY = 0; // Reset to ground level
+            newVelocity = 0; // Stop falling
             if (isJumpTriggered) isJumpTriggered = false; // Reset jump flag when landing
           }
         }
