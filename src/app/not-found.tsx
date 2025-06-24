@@ -124,7 +124,7 @@ const NotFound: React.FC = () => {
 
   return (
     <div className="flex fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-gray-900 to-black text-white flex-col items-center justify-center overflow-hidden">
-      <canvas ref={canvasRef} className="absolute top-0 left-0 z-0" />
+      <canvas ref={canvasRef} className=" w-full h-full" />
       <div className="relative z-10 text-center">
         <h1 className="text-7xl md:text-9xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 animate-pulse">
           404 - Page Not Found

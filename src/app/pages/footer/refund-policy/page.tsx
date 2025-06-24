@@ -1,5 +1,10 @@
 import React from "react";
+import RefundPolicy from "./RefundPolicy";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <RefundPolicy />
+    </div>
+  );
 }
