@@ -86,15 +86,21 @@ const NotFound: React.FC = () => {
       setGameState((prev) => {
         if (prev.isGameOver && !gameState.isGameOver) return prev; // Only update if not game over or restarting
 
-        let newDinoY = prev.dinoY + prev.dinoVelocity;
-        let newVelocity = prev.dinoVelocity + gravity;
+        let newDinoY = prev.dinoY;
+        let newVelocity = prev.dinoVelocity;
 
-        // Ensure dino stays on or above ground
-        const dinoBottom = groundY - dinoHeight + newDinoY;
-        if (dinoBottom >= groundY) {
-          newDinoY = 0;
-          newVelocity = 0;
-          if (isJumpTriggered) isJumpTriggered = false; // Reset jump flag when landing
+        // Apply gravity and jump only if triggered
+        if (isJumpTriggered || prev.dinoVelocity !== 0) {
+          newDinoY = prev.dinoY + prev.dinoVelocity;
+          newVelocity = prev.dinoVelocity + gravity;
+
+          // Ensure dino stays on or above ground
+          const dinoBottom = groundY - dinoHeight + newDinoY;
+          if (dinoBottom >= groundY) {
+            newDinoY = 0;
+            newVelocity = 0;
+            if (isJumpTriggered) isJumpTriggered = false; // Reset jump flag when landing
+          }
         }
 
         let newCacti = prev.cacti.map((cactus) => ({
