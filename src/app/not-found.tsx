@@ -54,8 +54,11 @@ const NotFound: React.FC = () => {
     const groundY = canvas.height - 50;
     const dinoHeight = 30; // Height of the dinosaur image
 
+    let isJumpTriggered = false; // Flag to control jump initiation
+
     const handleJump = () => {
-      if (gameState.dinoY <= 0 && !gameState.isGameOver) {
+      if (gameState.dinoY <= 0 && !gameState.isGameOver && !isJumpTriggered) {
+        isJumpTriggered = true;
         setGameState((prev) => ({ ...prev, dinoVelocity: jumpPower }));
       }
     };
@@ -69,6 +72,7 @@ const NotFound: React.FC = () => {
         score: 0,
         isGameOver: false,
       }));
+      isJumpTriggered = false; // Reset jump flag on restart
     };
 
     const spawnCactus = () => {
@@ -88,8 +92,9 @@ const NotFound: React.FC = () => {
         // Ensure dino stays on or above ground
         const dinoBottom = groundY - dinoHeight + newDinoY;
         if (dinoBottom >= groundY) {
-          newDinoY = 0; // Reset to ground level
-          newVelocity = 0; // Stop falling
+          newDinoY = 0;
+          newVelocity = 0;
+          if (isJumpTriggered) isJumpTriggered = false; // Reset jump flag when landing
         }
 
         let newCacti = prev.cacti.map((cactus) => ({
