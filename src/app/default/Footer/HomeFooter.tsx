@@ -129,7 +129,7 @@ export default function HomeFooter() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/footer/documentation"
+                    href="/pages/footer/documentation"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Documentation
@@ -137,7 +137,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/footer/case-studies"
+                    href="/pages/footer/case-studies"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Case Studies
@@ -145,7 +145,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/footer/support"
+                    href="/pages/footer/support"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Support
@@ -153,7 +153,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/footer/community"
+                    href="/pages/footer/community"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Community
@@ -168,7 +168,7 @@ export default function HomeFooter() {
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="/footer/privacy-policy"
+                    href="/pages/footer/privacy-policy"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Privacy Policy
@@ -176,7 +176,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/footer/terms-of-service"
+                    href="/pages/footer/terms-of-service"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Terms of Service
@@ -184,7 +184,7 @@ export default function HomeFooter() {
                 </li>
                 <li>
                   <Link
-                    href="/footer/refund-policy"
+                    href="/pages/footer/refund-policy"
                     className="text-sm text-muted-foreground hover:text-primary"
                   >
                     Cookie Policy
