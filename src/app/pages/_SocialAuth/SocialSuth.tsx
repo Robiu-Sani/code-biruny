@@ -38,7 +38,7 @@ export default function SocialAuth() {
           type="button"
           onClick={() =>
             signIn("google", {
-              callbackUrl: "https://code-biruny.vercel.app/dashboard/user",
+              callbackUrl: "/dashboard/user",
             })
           }
           className="flex w-1/3 items-center gap-2"
@@ -52,7 +52,7 @@ export default function SocialAuth() {
           type="button"
           onClick={() =>
             signIn("github", {
-              callbackUrl: "https://code-biruny.vercel.app/dashboard/user",
+              callbackUrl: "/dashboard/user",
             })
           }
           className="flex w-1/3 items-center gap-2"
@@ -66,7 +66,7 @@ export default function SocialAuth() {
           type="button"
           onClick={() =>
             signIn("twitter", {
-              callbackUrl: "https://code-biruny.vercel.app/dashboard/user",
+              callbackUrl: "/dashboard/user",
             })
           }
           className="flex w-1/3 items-center gap-2"
