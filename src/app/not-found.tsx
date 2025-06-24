@@ -54,7 +54,7 @@ const NotFound: React.FC = () => {
     const groundY = canvas.height - 50;
 
     const handleJump = () => {
-      if (gameState.dinoY === 0 && !gameState.isGameOver) {
+      if (gameState.dinoY <= 0 && !gameState.isGameOver) {
         setGameState((prev) => ({ ...prev, dinoVelocity: jumpPower }));
       }
     };
@@ -82,15 +82,18 @@ const NotFound: React.FC = () => {
         if (prev.isGameOver) return prev;
 
         // Update dino position
-        const newDinoY = prev.dinoY + prev.dinoVelocity;
-        const newVelocity = prev.dinoVelocity + gravity;
+        let newDinoY = prev.dinoY + prev.dinoVelocity;
+        let newVelocity = prev.dinoVelocity + gravity;
+        newDinoY = Math.max(0, newDinoY); // Ensure dino doesn't go below ground
+        newVelocity = newDinoY === 0 ? 0 : newVelocity; // Reset velocity when hitting ground
+
         let newCacti = prev.cacti.map((cactus) => ({
           x: cactus.x - cactusSpeed,
         }));
         newCacti = newCacti.filter((cactus) => cactus.x > -20);
 
         // Collision detection
-        let isGameOver: boolean = prev.isGameOver;
+        let isGameOver = prev.isGameOver;
         newCacti.forEach((cactus) => {
           if (cactus.x < 70 && cactus.x > 20 && newDinoY > -20) {
             isGameOver = true;
@@ -110,8 +113,8 @@ const NotFound: React.FC = () => {
 
         return {
           ...prev,
-          dinoY: newDinoY > 0 ? newDinoY : 0,
-          dinoVelocity: newDinoY > 0 ? newVelocity : 0,
+          dinoY: newDinoY,
+          dinoVelocity: newVelocity,
           cacti: newCacti,
           score: newScore,
           isGameOver,
@@ -174,8 +177,14 @@ const NotFound: React.FC = () => {
     };
   }, [gameState]);
 
+  const handleMobileJump = () => {
+    if (gameState.dinoY <= 0 && !gameState.isGameOver) {
+      setGameState((prev) => ({ ...prev, dinoVelocity: -12 }));
+    }
+  };
+
   return (
-    <div className="flex fixed top-0 left-0 z-[9999999999] bg-white flex-col items-center justify-center min-h-screen">
+    <div className="flex fixed top-0 left-0 z-[9999999999] w-full bg-white flex-col items-center justify-center min-h-screen">
       <h1 className="text-4xl font-bold mb-4">
         404 - Page Not Found | Code Biruny
       </h1>
@@ -198,6 +207,9 @@ const NotFound: React.FC = () => {
         </Button>
         <Button onClick={() => router.push("/")}>
           <Home className="mr-2 h-4 w-4" /> Home
+        </Button>
+        <Button onClick={handleMobileJump} className="bg-blue-500 text-white">
+          Jump
         </Button>
       </div>
     </div>
