@@ -52,7 +52,7 @@ export default function Community() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/50">
+    <section className="w-full py-12 md:py-24 lg:py-32 ">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
