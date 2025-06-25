@@ -1,289 +1,201 @@
-"use client";
-import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
+  CardContent,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Users, CheckCircle, Mail } from "lucide-react";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
+import {
+  Users,
+  MessageSquare,
+  Code,
+  Globe,
+  Calendar,
+  Trophy,
+  BookOpen,
+  Shield,
+  Mail,
+  Github,
+  Twitter,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
 
 export default function Community() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000); // Reset after 3 seconds
-    console.log("Form submitted:", formData);
-  };
-
-  const currentDate = new Date().toLocaleString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: true,
-    timeZone: "Asia/Dhaka",
-  }); // 02:24 PM +06, Wednesday, June 25, 2025
-
-  const communityBenefits = [
-    "Access to exclusive coding tutorials",
-    "Participate in live coding sessions",
-    "Network with global developers",
-    "Get personalized feedback on projects",
-  ];
-
-  const members = [
-    { id: 1, name: "Ali Khan", role: "Moderator", joined: "2024-06-01" },
-    { id: 2, name: "Sara Ahmed", role: "Member", joined: "2024-07-15" },
-    { id: 3, name: "Rahim Patel", role: "Contributor", joined: "2024-08-10" },
-  ];
-
   const events = [
     {
-      date: "June 25, 2025, 3:00 PM",
-      title: "Live Coding: React Basics",
-      location: "Online",
+      name: "Monthly Hackathon",
+      date: "15th June",
+      icon: <Code className="h-5 w-5" />,
     },
     {
-      date: "June 30, 2025, 6:00 PM",
-      title: "Q&A with Experts",
-      location: "Zoom",
+      name: "Tech Talk: Next.js 14",
+      date: "22nd June",
+      icon: <MessageSquare className="h-5 w-5" />,
     },
     {
-      date: "July 5, 2025, 2:00 PM",
-      title: "Hackathon Kickoff",
-      location: "Online",
+      name: "Open Source Day",
+      date: "5th July",
+      icon: <Github className="h-5 w-5" />,
     },
+  ];
+
+  const benefits = [
+    { title: "Exclusive Resources", icon: <BookOpen className="h-5 w-5" /> },
+    { title: "Networking Opportunities", icon: <Users className="h-5 w-5" /> },
+    { title: "Career Advancement", icon: <Trophy className="h-5 w-5" /> },
+    { title: "Global Connections", icon: <Globe className="h-5 w-5" /> },
+    { title: "Safe Environment", icon: <Shield className="h-5 w-5" /> },
   ];
 
   return (
-    <div className="min-h-screen  text-white">
-      {/* Hero Section */}
-      <section className="w-full py-20 text-center bg-opacity-50">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-          Welcome to Code Biruny Community
-        </h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-          Join a thriving network of developers, collaborate on projects, and
-          unlock your potential!
-        </p>
-        <Button
-          className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-all duration-300"
-          onClick={() => (window.location.href = "/join")}
-        >
-          <Users className="mr-2 h-5 w-5" /> Get Started
-        </Button>
-      </section>
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-muted/50">
+      <div className="container px-4 md:px-6">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
+            Code Biruny Community
+          </h1>
+          <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+            Join over 10,000 developers, designers, and tech enthusiasts in our
+            vibrant community. Learn, collaborate, and grow together in a
+            supportive environment.
+          </p>
+        </div>
 
-      {/* About Section */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              About Our Community
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <CardDescription className="text-gray-700">
-              Code Biruny is a global community for developers of all levels.
-              Founded to foster collaboration and learning, we offer resources,
-              events, and a supportive environment to help you grow.
-            </CardDescription>
-            <ul className="mt-4 space-y-2">
-              {communityBenefits.map((benefit, index) => (
-                <li key={index} className="flex items-center text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  {benefit}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <Users className="h-12 w-12 mb-4 text-blue-600" />
+              <CardTitle>Connect</CardTitle>
+              <CardDescription>
+                Meet like-minded professionals and build valuable relationships
+                that last.
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <Code className="h-12 w-12 mb-4 text-purple-600" />
+              <CardTitle>Collaborate</CardTitle>
+              <CardDescription>
+                Work on exciting projects and contribute to open-source
+                initiatives.
+              </CardDescription>
+            </CardHeader>
+          </Card>
+
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardHeader>
+              <Trophy className="h-12 w-12 mb-4 text-amber-600" />
+              <CardTitle>Grow</CardTitle>
+              <CardDescription>
+                Enhance your skills through workshops, hackathons, and
+                mentorship programs.
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
+
+        <Separator className="my-12" />
+
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 className="text-3xl font-bold mb-8">Upcoming Events</h2>
+            <div className="space-y-6">
+              {events.map((event, index) => (
+                <Card
+                  key={index}
+                  className="hover:bg-muted/50 transition-colors"
+                >
+                  <CardHeader className="flex flex-row items-center space-x-4 space-y-0">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      {event.icon}
+                    </div>
+                    <div>
+                      <CardTitle>{event.name}</CardTitle>
+                      <CardDescription className="flex items-center mt-1">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {event.date}
+                      </CardDescription>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <Button variant="outline" className="w-full">
+                      Register Now
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold mb-8">Community Benefits</h2>
+            <ul className="space-y-4">
+              {benefits.map((benefit, index) => (
+                <li key={index} className="flex items-start space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-full mt-1">
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">{benefit.title}</h3>
+                    <p className="text-muted-foreground">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Sed do eiusmod tempor.
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Member List */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              Community Members
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="text-gray-900">ID</TableHead>
-                  <TableHead className="text-gray-900">Name</TableHead>
-                  <TableHead className="text-gray-900">Role</TableHead>
-                  <TableHead className="text-gray-900">Joined</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {members.map((member) => (
-                  <TableRow key={member.id}>
-                    <TableCell className="text-gray-700">{member.id}</TableCell>
-                    <TableCell className="text-gray-700">
-                      {member.name}
-                    </TableCell>
-                    <TableCell className="text-gray-700">
-                      {member.role}
-                    </TableCell>
-                    <TableCell className="text-gray-700">
-                      {member.joined}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Events Schedule */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              Upcoming Events
-            </CardTitle>
-            <CardDescription className="text-gray-600">
-              Today is {currentDate}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="text-gray-900">Date & Time</TableHead>
-                  <TableHead className="text-gray-900">Event</TableHead>
-                  <TableHead className="text-gray-900">Location</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {events.map((event, index) => (
-                  <TableRow key={index}>
-                    <TableCell className="text-gray-700">
-                      {event.date}
-                    </TableCell>
-                    <TableCell className="text-gray-700">
-                      {event.title}
-                    </TableCell>
-                    <TableCell className="text-gray-700">
-                      {event.location}
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Join Form */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              Become a Member
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid w-full items-center gap-4">
-                <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="name" className="text-gray-900">
-                    Name
-                  </Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Enter your name"
-                    className="text-gray-900"
-                  />
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="email" className="text-gray-900">
-                    Email
-                  </Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    className="text-gray-900"
-                  />
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Label htmlFor="password" className="text-gray-900">
-                    Password
-                  </Label>
-                  <Input
-                    id="password"
-                    name="password"
-                    type="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    placeholder="Create a password"
-                    className="text-gray-900"
-                  />
-                </div>
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2"
-              >
-                <Mail className="h-5 w-5" />{" "}
-                {submitted ? "Joined!" : "Join Community"}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Footer */}
-      <footer className="w-full py-6 text-center bg-gray-800">
-        <p className="text-gray-400">
-          © 2025 Code Biruny. All rights reserved.
-        </p>
-        <div className="mt-2 flex justify-center gap-4">
-          <a href="/terms" className="text-gray-400 hover:text-white">
-            Terms
-          </a>
-          <a href="/privacy" className="text-gray-400 hover:text-white">
-            Privacy
-          </a>
+          </div>
         </div>
-      </footer>
-    </div>
+
+        <Separator className="my-12" />
+
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-6">Join Our Newsletter</h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground mb-8">
+            Stay updated with the latest news, events, and resources from Code
+            Biruny.
+          </p>
+          <div className="flex max-w-md mx-auto gap-2">
+            <Input
+              type="email"
+              placeholder="Your email address"
+              className="flex-1"
+            />
+            <Button type="submit">
+              <Mail className="mr-2 h-4 w-4" />
+              Subscribe
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center">
+          <h2 className="text-2xl font-semibold mb-6">Follow Us</h2>
+          <div className="flex space-x-4">
+            <Button variant="outline" size="icon">
+              <Github className="h-5 w-5" />
+            </Button>
+            <Button variant="outline" size="icon">
+              <Twitter className="h-5 w-5" />
+            </Button>
+            <Button variant="outline" size="icon">
+              <Linkedin className="h-5 w-5" />
+            </Button>
+            <Button variant="outline" size="icon">
+              <Youtube className="h-5 w-5" />
+            </Button>
+          </div>
+          <p className="mt-8 text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Code Biruny. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }

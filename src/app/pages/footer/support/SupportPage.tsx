@@ -1,212 +1,313 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Headphones, Mail, Clock, HelpCircle, Book } from "lucide-react";
-import Link from "next/link";
+import React from "react";
+import {
+  LifeBuoy,
+  Mail,
+  Phone,
+  MessageSquare,
+  ChevronRight,
+  BookOpen,
+  Users,
+  Code,
+  HelpCircle,
+  FileText,
+  Video,
+  Settings,
+  Globe,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function SupportPage() {
+  const supportChannels = [
+    {
+      title: "Help Center",
+      description: "Browse articles, tutorials and FAQs",
+      icon: <HelpCircle className="h-6 w-6 text-blue-500" />,
+      cta: "Visit Help Center",
+      link: "#",
+    },
+    {
+      title: "Community Forum",
+      description: "Get help from other developers",
+      icon: <Users className="h-6 w-6 text-purple-500" />,
+      cta: "Join Community",
+      link: "#",
+    },
+    {
+      title: "Contact Support",
+      description: "Reach our support team directly",
+      icon: <LifeBuoy className="h-6 w-6 text-amber-500" />,
+      cta: "Open Ticket",
+      link: "#",
+    },
+  ];
+
+  const resources = [
+    {
+      title: "Documentation",
+      description: "Complete API references and guides",
+      icon: <FileText className="h-5 w-5" />,
+    },
+    {
+      title: "Tutorials",
+      description: "Step-by-step learning paths",
+      icon: <BookOpen className="h-5 w-5" />,
+    },
+    {
+      title: "Video Guides",
+      description: "Watch our video tutorials",
+      icon: <Video className="h-5 w-5" />,
+    },
+    {
+      title: "Status Page",
+      description: "Check system status and uptime",
+      icon: <Globe className="h-5 w-5" />,
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "How do I reset my password?",
+      answer:
+        "You can reset your password by clicking on 'Forgot Password' on the login page. We'll send a reset link to your registered email address.",
+    },
+    {
+      question: "What are your support hours?",
+      answer:
+        "Our standard support hours are Monday to Friday, 9AM to 6PM EST. Priority support is available 24/7 for enterprise customers.",
+    },
+    {
+      question: "How can I upgrade my plan?",
+      answer:
+        "You can upgrade your plan from the Billing section in your account settings. All upgrades are prorated based on your current subscription.",
+    },
+    {
+      question: "Where can I find API documentation?",
+      answer:
+        "Our complete API documentation is available in the Developers section of our website. You can also access it directly from your dashboard.",
+    },
+  ];
+
   return (
-    <div className="min-h-screen  text-white">
-      {/* Header Section */}
-      <section className="w-full py-20 text-center bg-opacity-50">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-green-600">
+    <div className="container mx-auto px-4 py-12">
+      {/* Hero Section */}
+      <section className="text-center mb-16">
+        <Badge variant="outline" className="mb-6 py-2 px-4">
+          <LifeBuoy className="h-4 w-4 mr-2" />
           Support Center
+        </Badge>
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6">
+          How can we help you today?
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-          Welcome to the Code Biruny Support Center, your dedicated hub for
-          resolving issues, finding resources, and getting assistance from our
-          expert team. We’re committed to ensuring your experience is smooth and
-          productive.
-        </p>
-      </section>
-
-      {/* Support Info Section */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              Contact & Support Information
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-gray-700 space-y-4">
-            <p className="flex items-center">
-              <Headphones className="h-5 w-5 mr-2 text-zinc-600" />
-              Email:{" "}
-              <Link
-                href="mailto:support@codebiruny.com"
-                className="text-zinc-400 hover:underline ml-1"
-              >
-                support@codebiruny.com
-              </Link>{" "}
-              - For technical issues and account support.
-            </p>
-            <p className="flex items-center">
-              <Mail className="h-5 w-5 mr-2 text-zinc-600" />
-              Phone:{" "}
-              <Link
-                href="tel:+1-800-CODE-BIR"
-                className="text-zinc-400 hover:underline ml-1"
-              >
-                +1-800-CODE-BIR
-              </Link>{" "}
-              - Available for urgent queries.
-            </p>
-            <p className="flex items-center">
-              <Clock className="h-5 w-5 mr-2 text-zinc-600" />
-              Support Hours: Monday to Friday, 9:00 AM - 6:00 PM (GMT+6).
-              Weekend support available via email.
-            </p>
-            <p className="flex items-center">
-              Live Chat: Available on our website during business hours for
-              real-time assistance.
-            </p>
-            <p className="flex items-center">
-              <Book className="h-5 w-5 mr-2 text-zinc-600" />
-              Resources: Visit our{" "}
-              <Link href="/help-docs" className="text-zinc-400 hover:underline">
-                Help Documentation
-              </Link>{" "}
-              for guides and tutorials.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              Frequently Asked Questions
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-gray-700 space-y-6">
-            <p className="flex items-center">
-              <HelpCircle className="h-5 w-5 mr-2 text-zinc-600" />
-              <strong>How do I reset my password?</strong> If you’ve forgotten
-              your password, click the ``Forgot Password`` link on the login
-              page, enter your email, and follow the reset instructions sent to
-              your inbox.
-            </p>
-            <p className="flex items-center">
-              <HelpCircle className="h-5 w-5 mr-2 text-zinc-600" />
-              <strong>What is the community code of conduct?</strong> Our code
-              of conduct promotes respect, collaboration, and inclusivity. Check
-              the full guidelines in our{" "}
-              <Link
-                href="/code-of-conduct"
-                className="text-zinc-400 hover:underline"
-              >
-                community rules
-              </Link>
-              .
-            </p>
-            <p className="flex items-center">
-              <HelpCircle className="h-5 w-5 mr-2 text-zinc-600" />
-              <strong>How can I join a live session?</strong> Register for
-              events on our{" "}
-              <Link href="/events" className="text-zinc-400 hover:underline">
-                Events page
-              </Link>
-              , and you’ll receive a link via email 24 hours before the session.
-            </p>
-            <p className="flex items-center">
-              <HelpCircle className="h-5 w-5 mr-2 text-zinc-600" />
-              <strong>What should I do if my account is locked?</strong> Contact
-              support via email or phone with your account details, and our team
-              will assist you in regaining access within 24 hours.
-            </p>
-            <p className="flex items-center">
-              <HelpCircle className="h-5 w-5 mr-2 text-zinc-600" />
-              <strong>Where can I find project resources?</strong> Explore our{" "}
-              <Link href="/resources" className="text-zinc-400 hover:underline">
-                Resource Library
-              </Link>{" "}
-              for code snippets, templates, and more.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Ticket Submission Section */}
-      <section className="py-16 px-4 md:px-8">
-        <Card className="bg-white/80 backdrop-blur-md border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold text-gray-900">
-              Submit a Support Ticket
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-gray-700 space-y-4">
-            <p>
-              Need assistance? Submit a ticket below, and our support team will
-              review your request and respond within 48 hours. Please provide as
-              much detail as possible to help us assist you effectively.
-            </p>
-            <form className="mt-4 space-y-4">
-              <div className="flex flex-col">
-                <label className="text-gray-900">Full Name</label>
-                <input
-                  type="text"
-                  placeholder="Enter your full name"
-                  className="p-2 rounded-md text-gray-900"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="text-gray-900">Email Address</label>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="p-2 rounded-md text-gray-900"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="text-gray-900">Subject</label>
-                <input
-                  type="text"
-                  placeholder="Summarize your issue"
-                  className="p-2 rounded-md text-gray-900"
-                />
-              </div>
-              <div className="flex flex-col">
-                <label className="text-gray-900">Description</label>
-                <textarea
-                  placeholder="Provide detailed information about your issue"
-                  className="p-2 rounded-md text-gray-900 h-32"
-                ></textarea>
-              </div>
-              <div className="flex flex-col">
-                <label className="text-gray-900">Attachment (Optional)</label>
-                <input type="file" className="p-2 rounded-md text-gray-900" />
-              </div>
-              <button
-                type="submit"
-                className="bg-zinc-600 text-white px-4 py-2 rounded-md"
-              >
-                Submit Ticket
-              </button>
-            </form>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Footer */}
-      <footer className="w-full py-6 text-center bg-gray-800">
-        <p className="text-gray-400">
-          © 2025 Code Biruny. All rights reserved.
-        </p>
-        <div className="mt-2 flex justify-center gap-4">
-          <Link href="/terms" className="text-gray-400 hover:text-white">
-            Terms of Service
-          </Link>
-          <Link href="/privacy" className="text-gray-400 hover:text-white">
-            Privacy Policy
-          </Link>
-          <Link href="/faq" className="text-gray-400 hover:text-white">
-            FAQ
-          </Link>
-          <Link href="/contact" className="text-gray-400 hover:text-white">
-            Contact
-          </Link>
+        <div className="max-w-2xl mx-auto relative">
+          <Input
+            placeholder="Search help articles, documentation..."
+            className="pl-12 pr-6 py-6 text-lg"
+          />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
         </div>
-      </footer>
+      </section>
+
+      {/* Support Channels */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-8">Get Support</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {supportChannels.map((channel, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <div className="bg-primary/10 p-3 rounded-lg">
+                    {channel.icon}
+                  </div>
+                  <div>
+                    <CardTitle>{channel.title}</CardTitle>
+                    <CardDescription>{channel.description}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardFooter>
+                <Button variant="outline" className="w-full">
+                  {channel.cta} <ChevronRight className="h-4 w-4 ml-2" />
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Resources */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-semibold mb-8">Resources</h2>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {resources.map((resource, index) => (
+            <Button
+              key={index}
+              variant="outline"
+              className="h-auto py-6 flex-col items-start"
+            >
+              <div className="flex items-center mb-3">
+                {resource.icon}
+                <span className="ml-3 font-semibold">{resource.title}</span>
+              </div>
+              <p className="text-sm text-muted-foreground text-left">
+                {resource.description}
+              </p>
+            </Button>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="mb-16">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+          <Button variant="ghost">
+            View all FAQs <ChevronRight className="h-4 w-4 ml-2" />
+          </Button>
+        </div>
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((faq, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-left hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent>{faq.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
+
+      {/* Contact Section */}
+      <section className="mb-16">
+        <Card className="bg-muted/50">
+          <CardHeader>
+            <CardTitle className="text-2xl">Still need help?</CardTitle>
+            <CardDescription>
+              Our team is ready to assist you with any questions or issues.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-start space-x-4">
+                <Mail className="h-6 w-6 mt-1 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Email Support</h3>
+                  <p className="text-muted-foreground">
+                    support@codebiruny.com
+                  </p>
+                  <p className="text-sm mt-2">
+                    Typically responds within 2 hours
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <MessageSquare className="h-6 w-6 mt-1 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Live Chat</h3>
+                  <p className="text-muted-foreground">
+                    Available in your dashboard
+                  </p>
+                  <p className="text-sm mt-2">Mon-Fri, 9AM-6PM EST</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Phone className="h-6 w-6 mt-1 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Phone Support</h3>
+                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-sm mt-2">For enterprise customers only</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter className="justify-center">
+            <Button size="lg">
+              <LifeBuoy className="h-4 w-4 mr-2" />
+              Contact Support Team
+            </Button>
+          </CardFooter>
+        </Card>
+      </section>
+
+      {/* Status Section */}
+      <section>
+        <Card>
+          <CardHeader>
+            <div className="flex items-center space-x-3">
+              <div className="h-3 w-3 rounded-full bg-green-500"></div>
+              <CardTitle>All Systems Operational</CardTitle>
+            </div>
+            <CardDescription>
+              Last updated: {new Date().toLocaleString()}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="flex items-center space-x-3">
+                <Settings className="h-5 w-5" />
+                <div>
+                  <p className="font-medium">API</p>
+                  <p className="text-sm text-muted-foreground">100% uptime</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Globe className="h-5 w-5" />
+                <div>
+                  <p className="font-medium">Web Application</p>
+                  <p className="text-sm text-muted-foreground">100% uptime</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Code className="h-5 w-5" />
+                <div>
+                  <p className="font-medium">Developer Tools</p>
+                  <p className="text-sm text-muted-foreground">100% uptime</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button variant="link" className="px-0">
+              View status history <ChevronRight className="h-4 w-4 ml-2" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </section>
     </div>
+  );
+}
+
+function Search(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.3-4.3" />
+    </svg>
   );
 }
