@@ -1,5 +1,10 @@
 import React from "react";
+import Documentation from "./Documentation";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <Documentation />
+    </div>
+  );
 }
