@@ -25,10 +25,7 @@ export default function CommunityBanner() {
           </CardHeader>
           <CardContent className="flex flex-col md:flex-row justify-center gap-4 mt-6">
             <Link href={`/pages/login`}>
-              <Button
-                className="bg-zinc-600 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-all duration-300"
-                onClick={() => (window.location.href = "/join")}
-              >
+              <Button className="bg-zinc-600 hover:bg-zinc-700 text-white px-6 py-3 rounded-lg transition-all duration-300">
                 Join Now
               </Button>
             </Link>
