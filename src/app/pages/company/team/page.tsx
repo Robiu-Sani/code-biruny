@@ -1,5 +1,10 @@
 import React from "react";
+import TeamBanner from "./TeamBanner";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <TeamBanner />
+    </div>
+  );
 }

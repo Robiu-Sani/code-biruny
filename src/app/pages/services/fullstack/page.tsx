@@ -1,5 +1,10 @@
 import React from "react";
+import FullStuckServicesBanner from "./FullStuckServicesBanner";
 
 export default function FullStackDevelopment() {
-  return <div>page</div>;
+  return (
+    <div>
+      <FullStuckServicesBanner />
+    </div>
+  );
 }

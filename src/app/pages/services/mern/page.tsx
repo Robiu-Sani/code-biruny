@@ -1,5 +1,10 @@
 import React from "react";
+import MernServicesBanner from "./MernServicesBanner";
 
 export default function Mern() {
-  return <div>page</div>;
+  return (
+    <div>
+      <MernServicesBanner />
+    </div>
+  );
 }
