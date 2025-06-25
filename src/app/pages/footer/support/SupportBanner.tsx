@@ -45,7 +45,7 @@ export default function SupportBanner() {
   ];
 
   return (
-    <section className="w-full py-16 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30">
+    <section className="w-full py-16 ">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4 py-1.5 px-3">
