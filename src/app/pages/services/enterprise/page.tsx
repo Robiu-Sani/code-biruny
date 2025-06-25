@@ -1,5 +1,10 @@
 import React from "react";
+import EnterpriseBanner from "./EnterpriseBanner";
 
 export default function Enterprise() {
-  return <div>page</div>;
+  return (
+    <div>
+      <EnterpriseBanner />
+    </div>
+  );
 }
