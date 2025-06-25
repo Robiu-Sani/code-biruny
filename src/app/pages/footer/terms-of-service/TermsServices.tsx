@@ -23,9 +23,12 @@ import Link from "next/link";
 
 export default function TermsServices() {
   return (
-    <div className="min-h-screen bg-zinc-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-zinc-50 py-12 px-4 mt-5 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        <Link href={`/`} className="mb-6 text-zinc-600 hover:text-zinc-900">
+        <Link
+          href={`/`}
+          className="mb-6 text-zinc-600 flex justify-center item-center hover:text-zinc-900"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Home
         </Link>
@@ -37,9 +40,6 @@ export default function TermsServices() {
               Code Biruny Terms of Service
             </h1>
           </div>
-          <p className="mt-6 text-lg leading-8 text-zinc-600">
-            Last Updated: June 1, 2024
-          </p>
         </div>
 
         <Card className="mb-8 border-zinc-200">
@@ -52,9 +52,9 @@ export default function TermsServices() {
           <CardContent>
             <div className="space-y-4 text-zinc-700">
               <p>
-                Welcome to Code Biruny (``Company``, ``we``, ``our``, ``us``).
-                These Terms of Service (``Terms``) govern your access to and use
-                of our website, services, and products (``Services``).
+                Welcome to Code Biruny (Company, we, our, us). These Terms of
+                Service (Terms) govern your access to and use of our website,
+                services, and products (Services).
               </p>
               <p>
                 By accessing or using our Services, you agree to be bound by

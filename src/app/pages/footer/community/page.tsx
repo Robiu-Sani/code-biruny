@@ -1,5 +1,12 @@
 import React from "react";
+import CommunityBanner from "./CommunityBanner";
+import Community from "./Community";
 
 export default function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      <CommunityBanner />
+      <Community />
+    </div>
+  );
 }

@@ -23,7 +23,10 @@ export default function RefundPolicy() {
   return (
     <div className="min-h-screen mt-5 bg-zinc-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
-        <Link href={`/`} className="mb-6 text-zinc-600 hover:text-zinc-900">
+        <Link
+          href={`/`}
+          className="mb-6 text-zinc-600 flex justify-center item-center hover:text-zinc-900"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Home
         </Link>
