@@ -42,7 +42,7 @@ export default function ContactBanner() {
   ];
 
   return (
-    <section className="w-full py-16 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800">
+    <section className="w-full py-16 ">
       <div className="container mx-auto px-4 rounded-lg">
         <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 md:p-12 border border-zinc-200 dark:border-zinc-700 shadow-sm">
           {/* Main CTA */}

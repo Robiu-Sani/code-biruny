@@ -5,7 +5,7 @@ import { Mail, ArrowRight } from "lucide-react";
 
 export default function CommunityBanner() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800">
+    <section className="w-full py-12 md:py-24 lg:py-32 ">
       <div className="container mx-auto px-4">
         <Card className="mx-auto max-w-4xl bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700 shadow-sm">
           <CardHeader className="text-center">

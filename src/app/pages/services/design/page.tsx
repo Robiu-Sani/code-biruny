@@ -1,5 +1,10 @@
 import React from "react";
+import UIUXDesignBanner from "./UIUXDesignBanner";
 
 export default function Design() {
-  return <div>page</div>;
+  return (
+    <div>
+      <UIUXDesignBanner />
+    </div>
+  );
 }

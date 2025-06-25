@@ -49,7 +49,7 @@ export default function SupportBanner() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-16 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800">
+    <section className="w-full py-12 md:py-16 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge variant="outline" className="mb-4">
