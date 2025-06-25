@@ -95,7 +95,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="container py-12 md:py-16 lg:py-20">
+    <div className="container pb-12 pt-4 mx-auto">
       {/* Hero Section */}
       <section className="text-center mb-16">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">

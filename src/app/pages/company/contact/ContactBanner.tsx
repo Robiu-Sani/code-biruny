@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function ContactBanner() {
   return (
     <section className="w-full py-16 ">
-      <div className="container bg-gradient-to-r from-primary/10 to-purple-600/10 rounded-3xl p-8 md:p-12 mb-16 mx-auto">
+      <div className="container bg-gradient-to-r from-primary/10 to-purple-600/10 rounded-3xl p-8 md:p-12  mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold  mb-2">
