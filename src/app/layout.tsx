@@ -174,7 +174,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <HomeNav />
-          {children}
+          <div className="pt-50 sm:pt-5">{children}</div>
           <HomeFooter />
         </ThemeProvider>
       </body>
