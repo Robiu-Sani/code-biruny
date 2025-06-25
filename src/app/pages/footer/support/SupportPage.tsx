@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-green-900 to-black text-white">
+    <div className="min-h-screen  text-white">
       {/* Header Section */}
       <section className="w-full py-20 text-center bg-opacity-50">
         <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-zinc-400 to-green-600">

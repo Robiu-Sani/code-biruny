@@ -24,7 +24,7 @@ export default function SupportBanner() {
   }); // 02:54 PM +06, Wednesday, June 25, 2025
 
   return (
-    <div className="support-banner w-full py-16 md:py-24 bg-gradient-to-r from-zinc-900 via-green-900 to-black relative overflow-hidden">
+    <div className="support-banner w-full py-16 md:py-24  relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/path-to-your-image.jpg')] bg-cover bg-center opacity-20" />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Card className="bg-white/90 backdrop-blur-md border-0 shadow-xl rounded-xl overflow-hidden animate-fade-in">

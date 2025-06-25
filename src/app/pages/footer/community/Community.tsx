@@ -82,7 +82,7 @@ export default function Community() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
+    <div className="min-h-screen  text-white">
       {/* Hero Section */}
       <section className="w-full py-20 text-center bg-opacity-50">
         <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
