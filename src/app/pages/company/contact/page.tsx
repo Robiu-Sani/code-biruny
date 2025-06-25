@@ -4,7 +4,7 @@ import ContactPages from "./ContactPages";
 
 export default function page() {
   return (
-    <div>
+    <div className="container mx-auto ">
       <ContactBanner />
       <ContactPages />
     </div>

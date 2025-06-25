@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button";
 export default function ContactBanner() {
   return (
     <section className="w-full py-16 ">
-      <div className="container px-4 mx-auto">
+      <div className="container bg-gradient-to-r from-primary/10 to-purple-600/10 rounded-3xl p-8 md:p-12 mb-16 mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold  mb-2">
               Ready to start your project?
             </h2>
-            <p className="text-blue-100 dark:text-blue-200 max-w-lg">
+            <p className=" max-w-lg">
               Our team is here to help you bring your ideas to life. Get in
               touch today!
             </p>
@@ -28,7 +28,7 @@ export default function ContactBanner() {
             <Button
               variant="outline"
               size="lg"
-              className="text-white border-white hover:bg-white/10 gap-2"
+              className=" border-white hover:bg-white/10 gap-2"
             >
               <Phone className="h-5 w-5" />
               Call Now
@@ -38,20 +38,20 @@ export default function ContactBanner() {
 
         <div className="mt-12 pt-8 border-t border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center text-white">
+            <div className="flex flex-col items-center text-center ">
               <Mail className="h-8 w-8 mb-4" />
               <h3 className="font-semibold mb-1">Email Support</h3>
-              <p className="text-blue-100">support@codebiruny.com</p>
+              <p>support@codebiruny.com</p>
             </div>
-            <div className="flex flex-col items-center text-center text-white">
+            <div className="flex flex-col items-center text-center ">
               <Phone className="h-8 w-8 mb-4" />
               <h3 className="font-semibold mb-1">Phone Support</h3>
-              <p className="text-blue-100">+1 (555) 123-4567</p>
+              <p>+1 (555) 123-4567</p>
             </div>
-            <div className="flex flex-col items-center text-center text-white">
+            <div className="flex flex-col items-center text-center ">
               <MessageSquare className="h-8 w-8 mb-4" />
               <h3 className="font-semibold mb-1">Live Chat</h3>
-              <p className="text-blue-100">Available 24/7</p>
+              <p>Available 24/7</p>
             </div>
           </div>
         </div>
