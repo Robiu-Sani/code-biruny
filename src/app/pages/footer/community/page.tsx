@@ -4,7 +4,7 @@ import Community from "./Community";
 
 export default function page() {
   return (
-    <div>
+    <div className="container">
       <CommunityBanner />
       <Community />
     </div>

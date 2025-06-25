@@ -4,7 +4,7 @@ import CaseStudioBanner from "./CaseStudioBanner";
 
 export default function page() {
   return (
-    <div>
+    <div className="container mx-auto ">
       <CaseStudioBanner />
       <CaseStudiosPage />
     </div>

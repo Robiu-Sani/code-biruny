@@ -4,7 +4,7 @@ import SupportPage from "./SupportPage";
 
 export default function page() {
   return (
-    <div>
+    <div className="container mx-auto">
       <SupportBanner />
       <SupportPage />
     </div>
