@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Mail } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 
 export default function CommunityBanner() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 ">
-      <div className="container px-4 md:px-6">
-        <Card className="mx-auto max-w-4xl bg-background/80 backdrop-blur-sm">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800">
+      <div className="container mx-auto px-4">
+        <Card className="mx-auto max-w-4xl bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700 shadow-sm">
           <CardHeader className="text-center">
-            <CardTitle className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <CardTitle className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               Join the Code Biruny Community
             </CardTitle>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
               Be part of our growing community of developers, designers, and
               tech enthusiasts. Get updates, exclusive content, and connect with
               like-minded people.
@@ -23,17 +23,18 @@ export default function CommunityBanner() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-background"
+                className="flex-1 bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700"
               />
               <Button type="submit" className="shrink-0">
                 <Mail className="mr-2 h-4 w-4" />
                 Subscribe
+                <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
             </div>
-            <div className="mt-8 flex justify-center gap-4">
-              <Button variant="outline">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button variant="outline" className="gap-2">
                 <svg
-                  className="h-5 w-5 mr-2"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -41,9 +42,9 @@ export default function CommunityBanner() {
                 </svg>
                 GitHub
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" className="gap-2">
                 <svg
-                  className="h-5 w-5 mr-2"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -51,15 +52,35 @@ export default function CommunityBanner() {
                 </svg>
                 Facebook
               </Button>
-              <Button variant="outline">
+              <Button variant="outline" className="gap-2">
                 <svg
-                  className="h-5 w-5 mr-2"
+                  className="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
                 </svg>
                 Twitter
+              </Button>
+              <Button variant="outline" className="gap-2">
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                </svg>
+                YouTube
+              </Button>
+              <Button variant="outline" className="gap-2">
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
               </Button>
             </div>
           </CardContent>
