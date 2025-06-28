@@ -9,62 +9,195 @@ import {
   Globe,
   Server,
   Zap,
-  ChevronDown,
   ArrowRight,
+  ChevronDown,
+  FileText,
+  Cpu,
+  Lock,
+  Calendar,
+  MessageSquare,
+  Network,
+  GitBranch,
 } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
 
 export default function FAQSection() {
   const faqs = [
     {
       question: "What technologies do you specialize in?",
       answer:
-        "We specialize in modern web technologies including React, Next.js, TypeScript, Node.js, and Tailwind CSS. Our team has extensive experience with serverless architectures, GraphQL, and modern CSS frameworks. We also work with databases like PostgreSQL, MongoDB, and Firebase for complete full-stack solutions.",
+        "We specialize in modern web technologies including React, Next.js, TypeScript, Node.js, and Tailwind CSS. Our team has extensive experience with serverless architectures, GraphQL, and modern CSS frameworks.",
+      details: [
+        {
+          icon: <Code className="h-4 w-4" />,
+          text: "Frontend: React, Next.js, TypeScript, Tailwind CSS",
+        },
+        {
+          icon: <Server className="h-4 w-4" />,
+          text: "Backend: Node.js, Express, NestJS",
+        },
+        {
+          icon: <GitBranch className="h-4 w-4" />,
+          text: "Databases: PostgreSQL, MongoDB, Firebase",
+        },
+        {
+          icon: <Cpu className="h-4 w-4" />,
+          text: "DevOps: Docker, AWS, Vercel, CI/CD pipelines",
+        },
+      ],
       icon: <Code className="h-5 w-5 text-primary" />,
     },
     {
       question: "How quickly can you start working on my project?",
       answer:
-        "Typically, we can begin new projects within 1-2 weeks of initial contact. For urgent projects, we offer expedited onboarding with a 3-day startup option. The exact timeline depends on our current workload and the complexity of your project requirements. We recommend scheduling a discovery call to discuss your timeline in detail.",
+        "Our onboarding process is streamlined to get your project started as quickly as possible while ensuring we have all the necessary requirements.",
+      details: [
+        {
+          icon: <Calendar className="h-4 w-4" />,
+          text: "Standard projects: 1-2 weeks from initial contact",
+        },
+        {
+          icon: <Zap className="h-4 w-4" />,
+          text: "Expedited projects: 3-day startup option available",
+        },
+        {
+          icon: <FileText className="h-4 w-4" />,
+          text: "Discovery phase typically takes 2-3 days",
+        },
+        {
+          icon: <MessageSquare className="h-4 w-4" />,
+          text: "We provide a detailed timeline during our initial consultation",
+        },
+      ],
       icon: <Rocket className="h-5 w-5 text-primary" />,
     },
     {
       question: "What security measures do you implement?",
       answer:
-        "Security is our top priority. We implement industry-standard practices including end-to-end encryption, regular security audits, OWASP guidelines compliance, and penetration testing. All our developers undergo security training, and we use secure development lifecycle (SDL) processes. For sensitive projects, we can implement additional measures like multi-factor authentication and IP whitelisting.",
+        "Security is integrated into every phase of our development process, from initial design to deployment and maintenance.",
+      details: [
+        {
+          icon: <Lock className="h-4 w-4" />,
+          text: "End-to-end encryption for all data transmissions",
+        },
+        {
+          icon: <Shield className="h-4 w-4" />,
+          text: "Regular security audits and penetration testing",
+        },
+        {
+          icon: <Network className="h-4 w-4" />,
+          text: "OWASP Top 10 compliance for all web applications",
+        },
+        {
+          icon: <Users className="h-4 w-4" />,
+          text: "Developer security training and secure coding practices",
+        },
+      ],
       icon: <Shield className="h-5 w-5 text-primary" />,
     },
     {
       question: "What are your payment terms?",
       answer:
-        "We offer flexible payment options including 50% upfront with 50% upon completion for smaller projects. For larger engagements, we typically work with monthly billing cycles. We accept all major credit cards, bank transfers, and cryptocurrency. All invoices are net 15 unless otherwise agreed upon in our contract. Enterprise clients may qualify for extended payment terms.",
+        "We offer flexible payment solutions tailored to your project size and duration.",
+      details: [
+        {
+          icon: <CreditCard className="h-4 w-4" />,
+          text: "Small projects: 50% upfront, 50% on completion",
+        },
+        {
+          icon: <FileText className="h-4 w-4" />,
+          text: "Monthly billing for ongoing engagements",
+        },
+        {
+          icon: <Globe className="h-4 w-4" />,
+          text: "Multiple payment methods accepted (cards, transfer, crypto)",
+        },
+        {
+          icon: <Calendar className="h-4 w-4" />,
+          text: "Net 15 terms standard, with options for extended terms",
+        },
+      ],
       icon: <CreditCard className="h-5 w-5 text-primary" />,
     },
     {
       question: "Can you work with our existing development team?",
       answer:
-        "Absolutely! We frequently collaborate with in-house teams to provide specialized expertise or additional bandwidth. Our developers can integrate with your existing workflows, tools, and processes. We're experienced in pair programming, code reviews, and knowledge transfer sessions to ensure seamless collaboration. We can adapt to your preferred communication channels and project management tools.",
+        "We have extensive experience collaborating with in-house teams to augment capabilities and accelerate delivery.",
+      details: [
+        {
+          icon: <Users className="h-4 w-4" />,
+          text: "Seamless integration with your existing workflows",
+        },
+        {
+          icon: <Code className="h-4 w-4" />,
+          text: "Pair programming and code review services",
+        },
+        {
+          icon: <MessageSquare className="h-4 w-4" />,
+          text: "Adaptation to your preferred communication tools",
+        },
+        {
+          icon: <GitBranch className="h-4 w-4" />,
+          text: "Knowledge transfer and documentation services",
+        },
+      ],
       icon: <Users className="h-5 w-5 text-primary" />,
     },
     {
       question: "Do you provide hosting and maintenance services?",
       answer:
-        "Yes, we offer comprehensive hosting solutions and maintenance packages. Our hosting infrastructure includes global CDN, DDoS protection, automated backups, and 24/7 monitoring. Maintenance plans range from basic security updates to full-service retainer agreements with SLA guarantees. We support all the applications we build for as long as you need our assistance.",
+        "Our comprehensive hosting and maintenance solutions ensure your application remains secure, performant, and up-to-date.",
+      details: [
+        {
+          icon: <Server className="h-4 w-4" />,
+          text: "Global CDN with DDoS protection",
+        },
+        {
+          icon: <Shield className="h-4 w-4" />,
+          text: "Automated daily backups with 30-day retention",
+        },
+        {
+          icon: <Zap className="h-4 w-4" />,
+          text: "24/7 monitoring with immediate alerting",
+        },
+        {
+          icon: <Calendar className="h-4 w-4" />,
+          text: "Flexible maintenance plans with SLA guarantees",
+        },
+      ],
       icon: <Server className="h-5 w-5 text-primary" />,
     },
     {
       question: "What regions do you primarily serve?",
       answer:
-        "While we're based in North America, we serve clients worldwide. Our distributed team allows us to work across multiple time zones, ensuring coverage for most business hours globally. We have particular expertise in compliance requirements for North America, Europe (including GDPR), and the Asia-Pacific region. All our contracts can be customized to meet local legal requirements.",
+        "Our distributed team allows us to serve clients globally while understanding regional requirements.",
+      details: [
+        {
+          icon: <Globe className="h-4 w-4" />,
+          text: "Headquartered in North America with global clients",
+        },
+        {
+          icon: <FileText className="h-4 w-4" />,
+          text: "GDPR compliance for European clients",
+        },
+        {
+          icon: <Network className="h-4 w-4" />,
+          text: "APAC region coverage with local compliance expertise",
+        },
+        {
+          icon: <MessageSquare className="h-4 w-4" />,
+          text: "Multilingual support available",
+        },
+      ],
       icon: <Globe className="h-5 w-5 text-primary" />,
-    },
-    {
-      question: "How do you handle project scalability?",
-      answer:
-        "We architect all projects with scalability in mind from day one. Our approach includes microservices architecture when appropriate, auto-scaling cloud infrastructure, and performance optimization at every layer. We conduct load testing for high-traffic applications and implement progressive enhancement strategies. For growing businesses, we design systems that can scale both technically and organizationally.",
-      icon: <Zap className="h-5 w-5 text-primary" />,
     },
   ];
 
@@ -72,45 +205,61 @@ export default function FAQSection() {
     <section className="w-full py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <HelpCircle className="h-5 w-5 mr-2 text-primary" />
-            <span className="font-medium">FAQs</span>
-          </div>
+          <Badge variant="secondary" className="mb-4">
+            <HelpCircle className="h-4 w-4 mr-2" />
+            FAQs
+          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Find answers to common questions about our services and processes.
+            Find answers to common questions about our services and processes
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <Accordion type="single" collapsible className="w-full space-y-4">
           {faqs.map((faq, index) => (
-            <Card key={index} className="hover:shadow-md transition-shadow">
-              <CardHeader className="pb-0">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-primary/10 p-2 rounded-lg">{faq.icon}</div>
-                  <div className="flex-1">
-                    <CardTitle className="text-lg">{faq.question}</CardTitle>
+            <Card key={index} className="overflow-hidden">
+              <AccordionItem value={`item-${index}`} className="border-0">
+                <AccordionTrigger className="hover:no-underline px-6 py-5">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-primary/10 p-2 rounded-lg">
+                      {faq.icon}
+                    </div>
+                    <h3 className="text-lg font-medium text-left">
+                      {faq.question}
+                    </h3>
                   </div>
-                  <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <ChevronDown className="h-4 w-4" />
-                  </Button>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <Separator className="mb-4" />
-                <p className="text-muted-foreground">{faq.answer}</p>
-              </CardContent>
+                  <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 pt-0">
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {faq.details.map((detail, i) => (
+                        <div
+                          key={i}
+                          className="flex items-start space-x-3 bg-muted/50 p-3 rounded-lg"
+                        >
+                          <div className="bg-primary/10 p-1.5 rounded-full mt-0.5">
+                            {detail.icon}
+                          </div>
+                          <p className="text-sm">{detail.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
             </Card>
           ))}
-        </div>
+        </Accordion>
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-6">
             Still have questions? We`re here to help.
           </p>
-          <Button variant="default">
+          <Button>
             Contact Support
             <ArrowRight className="h-4 w-4 ml-2" />
           </Button>
