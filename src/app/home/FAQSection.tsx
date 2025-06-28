@@ -201,7 +201,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="w-full py-16 md:py-24 bg-muted/50">
+    <section className="w-full py-16 md:py-24 ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge variant="secondary" className="mb-4">
@@ -216,14 +216,18 @@ export default function FAQSection() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="max-w-5xl space-y-4">
+        <Accordion
+          type="single"
+          collapsible
+          className="max-w-5xl mx-auto space-y-4"
+        >
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-0"
+              className="border-b"
             >
-              <AccordionTrigger className="hover:no-underline px-6 py-5">
+              <AccordionTrigger className="hover:no-underline px-6 py-3">
                 <div className="flex items-center space-x-4">
                   <div className="bg-primary/10 p-2 rounded-lg">{faq.icon}</div>
                   <h3 className="text-lg font-medium text-left">
