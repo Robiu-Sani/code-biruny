@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Code Biruny - Custom Software Development & IT Solutions",
-    template: "%s | Code Biruny",
+    default: "Code Biruni - Custom Software Development & IT Solutions",
+    template: "%s | Code Biruni",
   },
   description:
-    "Code Biruny delivers cutting-edge custom software development, web applications, and digital transformation solutions for businesses worldwide.",
+    "Code Biruni delivers cutting-edge custom software development, web applications, and digital transformation solutions for businesses worldwide.",
   keywords: [
     "software development",
     "web development",
@@ -30,12 +30,15 @@ export const metadata: Metadata = {
     "digital transformation",
     "app development",
     "cloud solutions",
+    "Code Biruni",
+    "code biruni",
+    "code biruny",
     "Code Biruny",
     "technology consulting",
   ],
-  authors: [{ name: "Code Biruny", url: "https://code-biruny.vercel.app" }],
-  creator: "Code Biruny",
-  publisher: "Code Biruny",
+  authors: [{ name: "Code Biruni", url: "https://code-biruny.vercel.app" }],
+  creator: "Code Biruni",
+  publisher: "Code Biruni",
   metadataBase: new URL("https://code-biruny.vercel.app"),
   alternates: {
     canonical: "/",
@@ -44,17 +47,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Code Biruny - Building Digital Bridges Worldwide",
+    title: "Code Biruni - Building Digital Bridges Worldwide",
     description:
       "Custom software development and IT solutions tailored to your business needs.",
     url: "https://code-biruny.vercel.app",
-    siteName: "Code Biruny",
+    siteName: "Code Biruni",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Code Biruny - Digital Solutions",
+        alt: "Code Biruni - Digital Solutions",
       },
     ],
     locale: "en_US",
@@ -62,11 +65,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Code Biruny - Building Digital Bridges Worldwide",
+    title: "Code Biruni - Building Digital Bridges Worldwide",
     description:
       "Custom software development and IT solutions tailored to your business needs.",
     images: ["/twitter-image.jpg"],
-    creator: "@codebiruny",
+    creator: "@codebiruni",
   },
   robots: {
     index: true,
@@ -133,8 +136,8 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
 
         {/* PWA tags */}
-        <meta name="application-name" content="Code Biruny" />
-        <meta name="apple-mobile-web-app-title" content="Code Biruny" />
+        <meta name="application-name" content="Code Biruni" />
+        <meta name="apple-mobile-web-app-title" content="Code Biruni" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
@@ -156,7 +159,7 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Code Biruny",
+            name: "Code Biruni",
             url: "https://code-biruny.vercel.app",
             logo: "https://code-biruny.vercel.app/logo.png",
             description:

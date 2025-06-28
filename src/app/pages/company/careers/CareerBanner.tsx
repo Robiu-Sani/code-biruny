@@ -58,7 +58,7 @@ export default function CareerBanner() {
             </Badge>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Build Your Career at Code Biruny
+              Build Your Career at Code Biruni
             </h1>
 
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-8 max-w-2xl">

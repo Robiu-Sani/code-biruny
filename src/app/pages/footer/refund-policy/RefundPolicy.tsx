@@ -35,7 +35,7 @@ export default function RefundPolicy() {
           <div className="flex items-center justify-center mb-4">
             <BadgeDollarSign className="h-10 w-10 text-zinc-900 mr-3" />
             <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
-              Code Biruny Refund Policy
+              Code Biruni Refund Policy
             </h1>
           </div>
           <p className="mt-6 text-lg leading-8 text-zinc-600">
@@ -55,7 +55,7 @@ export default function RefundPolicy() {
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-zinc-700">
-              At Code Biruny, we strive to deliver exceptional digital solutions
+              At Code Biruni, we strive to deliver exceptional digital solutions
               that meet your business needs. However, we understand that
               sometimes circumstances may require refunds. Please review our
               policy carefully.
@@ -251,11 +251,11 @@ export default function RefundPolicy() {
 
         <div className="mt-12 text-center text-sm text-zinc-500">
           <p>
-            Code Biruny reserves the right to modify this refund policy at any
+            Code Biruni reserves the right to modify this refund policy at any
             time. Changes will be posted on this page.
           </p>
           <p className="mt-2">
-            © {new Date().getFullYear()} Code Biruny. All rights reserved.
+            © {new Date().getFullYear()} Code Biruni. All rights reserved.
           </p>
         </div>
       </div>

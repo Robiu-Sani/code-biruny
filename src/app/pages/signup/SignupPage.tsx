@@ -49,7 +49,7 @@ export default function SignupPage() {
         <div className=" sm:shadow-md rounded-lg sm:p-8 p-4 space-y-6 sm:border border-gray-200 dark:border-gray-700">
           <Form {...form}>
             <div className="text-center">
-              <h1 className="text-3xl text-center font-bold ">Code Biruny</h1>
+              <h1 className="text-3xl text-center font-bold ">Code Biruni</h1>
               <p className="mt-2 text-sm text-center">
                 Stay with us and enjoy your life in the digital world!
               </p>

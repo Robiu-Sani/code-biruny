@@ -35,7 +35,7 @@ export default function BlogBanner() {
   ];
 
   return (
-    <section className="w-full py-12 md:py-16 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800">
+    <section className="w-full py-12 md:py-16 ">
       <div className="container mx-auto px-4 rounded-lg">
         <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           {/* Main Content */}
@@ -46,7 +46,7 @@ export default function BlogBanner() {
             </Badge>
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Code Biruny Blog
+              Code Biruni Blog
             </h1>
 
             <p className="text-lg text-zinc-600 dark:text-zinc-300 mb-8 max-w-2xl">
@@ -113,7 +113,7 @@ export default function BlogBanner() {
               <User className="h-6 w-6 text-zinc-500" />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h3 className="font-semibold">Written by Code Biruny Team</h3>
+              <h3 className="font-semibold">Written by Code Biruni Team</h3>
               <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
                 Our team of developers shares their knowledge and experience to
                 help you build better web applications.

@@ -56,7 +56,7 @@ export default function Community() {
       <div className="container px-4 md:px-6">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6">
-            Code Biruny Community
+            Code Biruni Community
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
             Join over 10,000 developers, designers, and tech enthusiasts in our
@@ -192,7 +192,7 @@ export default function Community() {
             </Button>
           </div>
           <p className="mt-8 text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Code Biruny. All rights reserved.
+            © {new Date().getFullYear()} Code Biruni. All rights reserved.
           </p>
         </div>
       </div>

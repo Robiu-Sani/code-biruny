@@ -10,7 +10,7 @@ export default function CommunityBanner() {
         <Card className="mx-auto max-w-4xl bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700 shadow-sm">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Join the Code Biruny Community
+              Join the Code Biruni Community
             </CardTitle>
             <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
               Be part of our growing community of developers, designers, and

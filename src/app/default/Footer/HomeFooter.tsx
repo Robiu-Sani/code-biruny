@@ -13,13 +13,13 @@ export default function HomeFooter() {
           </h3>
           <Image
             src={`/logo.jpg`}
-            alt="code biruny logo"
+            alt="Code Biruni logo"
             width={120}
             height={120}
             className="mx-auto rounded-lg mb-6"
           />
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Code Biruny provides cutting-edge IT solutions, web development, and
+            Code Biruni provides cutting-edge IT solutions, web development, and
             software services to help your business thrive in the digital world.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -200,12 +200,12 @@ export default function HomeFooter() {
             <div className="flex items-center mb-4 md:mb-0">
               <Image
                 src="/logo.jpg"
-                alt="Code Biruny Logo"
+                alt="Code Biruni Logo"
                 width={32}
                 height={32}
                 className=" mr-2 rounded-md"
               />
-              <span className="font-semibold">Code Biruny</span>
+              <span className="font-semibold">Code Biruni</span>
             </div>
 
             <div className="flex space-x-6">
@@ -255,7 +255,7 @@ export default function HomeFooter() {
             </div>
 
             <p className="text-sm text-muted-foreground mt-4 md:mt-0">
-              © {new Date().getFullYear()} Code Biruny. All rights reserved.
+              © {new Date().getFullYear()} Code Biruni. All rights reserved.
             </p>
           </div>
         </div>

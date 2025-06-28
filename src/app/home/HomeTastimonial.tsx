@@ -15,7 +15,7 @@ export default function HomeTestimonial() {
       avatar: "/avatars/01.png",
       rating: 5,
       content:
-        "Code Biruny's digital transformation services revolutionized our e-commerce platform, delivering a 40% increase in conversion rates with their cutting-edge approach.",
+        "Code Biruni's digital transformation services revolutionized our e-commerce platform, delivering a 40% increase in conversion rates with their cutting-edge approach.",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export default function HomeTestimonial() {
       avatar: "/avatars/03.png",
       rating: 5,
       content:
-        "The AI-powered education platform Code Biruny developed has transformed how we deliver content, with personalized learning paths for each student.",
+        "The AI-powered education platform Code Biruni developed has transformed how we deliver content, with personalized learning paths for each student.",
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ export default function HomeTestimonial() {
       avatar: "/avatars/04.png",
       rating: 5,
       content:
-        "Code Biruny's IoT solution with real-time analytics and predictive maintenance has saved us over $250k annually in operational costs.",
+        "Code Biruni's IoT solution with real-time analytics and predictive maintenance has saved us over $250k annually in operational costs.",
     },
     {
       id: 5,
@@ -51,7 +51,7 @@ export default function HomeTestimonial() {
       avatar: "/avatars/05.png",
       rating: 5,
       content:
-        "Our new customer engagement platform developed by Code Biruny increased retention by 35% through hyper-personalized experiences.",
+        "Our new customer engagement platform developed by Code Biruni increased retention by 35% through hyper-personalized experiences.",
     },
   ];
 
@@ -92,7 +92,7 @@ export default function HomeTestimonial() {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-200 mb-4">
             Success Stories with{" "}
-            <span className="text-primary">Code Biruny</span>
+            <span className="text-primary">Code Biruni</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
             Trusted by innovators who`ve transformed their businesses with our

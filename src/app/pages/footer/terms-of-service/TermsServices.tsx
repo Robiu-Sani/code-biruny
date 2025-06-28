@@ -37,7 +37,7 @@ export default function TermsServices() {
           <div className="flex items-center justify-center mb-4">
             <Gavel className="h-10 w-10 text-zinc-900 mr-3" />
             <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
-              Code Biruny Terms of Service
+              Code Biruni Terms of Service
             </h1>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function TermsServices() {
           <CardContent>
             <div className="space-y-4 text-zinc-700">
               <p>
-                Welcome to Code Biruny (Company, we, our, us). These Terms of
+                Welcome to Code Biruni (Company, we, our, us). These Terms of
                 Service (Terms) govern your access to and use of our website,
                 services, and products (Services).
               </p>
@@ -267,7 +267,7 @@ export default function TermsServices() {
                   Limitation of Liability
                 </h3>
                 <p className="text-zinc-700">
-                  To the maximum extent permitted by law, Code Biruny shall not
+                  To the maximum extent permitted by law, Code Biruni shall not
                   be liable for any indirect, incidental, special, consequential
                   or punitive damages, or any loss of profits or revenues,
                   whether incurred directly or indirectly.
@@ -325,7 +325,7 @@ export default function TermsServices() {
             understood these Terms of Service.
           </p>
           <p className="mt-2">
-            © {new Date().getFullYear()} Code Biruny. All rights reserved.
+            © {new Date().getFullYear()} Code Biruni. All rights reserved.
           </p>
         </div>
       </div>

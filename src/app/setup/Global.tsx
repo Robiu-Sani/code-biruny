@@ -152,7 +152,7 @@ export default function Global() {
               </h1>
 
               <p className="text-lg text-center lg:text-left text-zinc-600 dark:text-zinc-400 max-w-lg">
-                Code Biruny creates seamless digital experiences that connect
+                Code Biruni creates seamless digital experiences that connect
                 businesses across continents with cutting-edge technology and
                 innovative solutions.
               </p>

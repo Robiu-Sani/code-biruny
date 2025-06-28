@@ -57,7 +57,7 @@ export default function AboutUsBanner() {
             Building the Future of Developer Tools
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-zinc-600 dark:text-zinc-300">
-            Code Biruny was founded with a simple mission: to create tools that
+            Code Biruni was founded with a simple mission: to create tools that
             make developers` lives easier and more productive.
           </p>
         </div>

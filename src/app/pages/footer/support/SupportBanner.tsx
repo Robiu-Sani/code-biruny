@@ -32,7 +32,7 @@ export default function SupportBanner() {
     },
     {
       title: "Community Forum",
-      description: "Get help from other Code Biruny community members",
+      description: "Get help from other Code Biruni community members",
       icon: <Users className="h-6 w-6 text-purple-500" />,
       badge: "24/7",
     },
@@ -53,7 +53,7 @@ export default function SupportBanner() {
             We`re here to help
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
-            Code Biruny Support Center
+            Code Biruni Support Center
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
             Get the help you need to build amazing projects with our tools and

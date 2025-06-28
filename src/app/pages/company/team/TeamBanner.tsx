@@ -95,7 +95,7 @@ export default function TeamBanner() {
             Meet the Team
           </Badge>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            The People Behind Code Biruny
+            The People Behind Code Biruni
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-zinc-600 dark:text-zinc-300">
             A diverse team of passionate engineers, designers, and

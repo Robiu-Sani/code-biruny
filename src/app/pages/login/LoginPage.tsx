@@ -39,7 +39,7 @@ export default function LoginPage() {
           <Form {...form}>
             <div className="text-center">
               <h1 className="text-2xl text-center font-bold ">
-                Welcome to Code Biruny
+                Welcome to Code Biruni
               </h1>
               <p className="mt-2 text-sm text-center">
                 Stay with us and enjoy your life in the digital world

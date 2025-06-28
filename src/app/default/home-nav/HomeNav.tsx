@@ -20,15 +20,15 @@ import {
   X,
   Linkedin,
   Album,
-  TabletSmartphone,
   FolderOpenDot,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
 import { VscAzure, VscServerEnvironment, VscCode } from "react-icons/vsc";
-import { FiLayers, FiUsers, FiMail } from "react-icons/fi";
+import { FiUsers, FiMail } from "react-icons/fi";
 import Image from "next/image";
 import SearchBox from "../SearchBox";
+// FiLayers, TabletSmartphone,
 
 export default function HomeNav() {
   const { theme, setTheme } = useTheme();
@@ -75,18 +75,18 @@ export default function HomeNav() {
       description: "Custom business solutions",
       icon: <VscAzure className="h-5 w-5" />,
     },
-    {
-      title: "Mobile App Development",
-      href: "/pages/services/mobile",
-      description: "User-friendly mobile applications",
-      icon: <TabletSmartphone className="h-5 w-5" />,
-    },
-    {
-      title: "UI/UX Design",
-      href: "/pages/services/design",
-      description: "Beautiful, intuitive interfaces",
-      icon: <FiLayers className="h-5 w-5" />,
-    },
+    // {
+    //   title: "Mobile App Development",
+    //   href: "/pages/services/mobile",
+    //   description: "User-friendly mobile applications",
+    //   icon: <TabletSmartphone className="h-5 w-5" />,
+    // },
+    // {
+    //   title: "UI/UX Design",
+    //   href: "/pages/services/design",
+    //   description: "Beautiful, intuitive interfaces",
+    //   icon: <FiLayers className="h-5 w-5" />,
+    // },
   ];
 
   const companyItems = [
@@ -102,12 +102,12 @@ export default function HomeNav() {
       description: "Meet the talented people",
       icon: <FiUsers className="h-5 w-5" />,
     },
-    {
-      title: "Careers",
-      href: "/pages/company/careers",
-      description: "Join our growing team",
-      icon: <FiUsers className="h-5 w-5" />,
-    },
+    // {
+    //   title: "Careers",
+    //   href: "/pages/company/careers",
+    //   description: "Join our growing team",
+    //   icon: <FiUsers className="h-5 w-5" />,
+    // },
     {
       title: "Contact",
       href: "/pages/company/contact",
@@ -131,7 +131,7 @@ export default function HomeNav() {
               className="w-8 h-8 rounded-md"
             />
             <span className="font-bold hidden sm:block text-xl">
-              Code Biruny
+              Code Biruni
             </span>
           </Link>
 

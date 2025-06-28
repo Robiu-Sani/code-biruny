@@ -56,7 +56,7 @@ export default function FourthSection() {
           <div className="relative h-full min-h-[300px] md:min-h-[400px] rounded-xl overflow-hidden bg-gradient-to-br from-gray-200/50 to-gray-300/30 dark:from-zinc-800/70 dark:to-zinc-900/50 border border-gray-200 dark:border-zinc-700/50">
             <Image
               src={`/whychoesus.png`}
-              alt="code biruny why choose us image"
+              alt="Code Biruni why choose us image"
               width={800}
               height={800}
               className="w-full h-full object-cover"

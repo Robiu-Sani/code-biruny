@@ -130,7 +130,7 @@ const NotFound: React.FC = () => {
           404 - Page Not Found
         </h1>
         <h2 className="text-4xl md:text-6xl font-bold mt-4 text-white animate-fade-in">
-          | Code Biruny
+          | Code Biruni
         </h2>
         <p className="mt-6 text-lg md:text-xl text-gray-300">
           Oops! You’ve wandered into the unknown. Explore your way back!

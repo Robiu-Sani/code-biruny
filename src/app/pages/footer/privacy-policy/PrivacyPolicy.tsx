@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
           <div className="flex items-center justify-center mb-4">
             <Shield className="h-10 w-10 text-zinc-900 mr-3" />
             <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
-              Code Biruny Privacy Policy
+              Code Biruni Privacy Policy
             </h1>
           </div>
           <p className="mt-6 text-lg leading-8 text-zinc-600">
@@ -255,7 +255,7 @@ export default function PrivacyPolicy() {
                         Data Protection Officer
                       </p>
                       <p className="text-zinc-600">
-                        Attn: Privacy Team, Code Biruny
+                        Attn: Privacy Team, Code Biruni
                       </p>
                     </div>
                   </div>
@@ -279,11 +279,11 @@ export default function PrivacyPolicy() {
 
         <div className="mt-12 text-center text-sm text-zinc-500">
           <p>
-            Code Biruny is committed to protecting your privacy and securing
+            Code Biruni is committed to protecting your privacy and securing
             your data.
           </p>
           <p className="mt-2">
-            © {new Date().getFullYear()} Code Biruny. All rights reserved.
+            © {new Date().getFullYear()} Code Biruni. All rights reserved.
           </p>
         </div>
       </div>
