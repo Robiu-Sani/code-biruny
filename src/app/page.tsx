@@ -1,3 +1,4 @@
+import FAQSection from "./home/FAQSection";
 import FourthSection from "./home/FourthSection";
 import HomeProject from "./home/HomeProject";
 import HomeTastimonial from "./home/HomeTastimonial";
@@ -13,6 +14,7 @@ export default function Home() {
       <ThirdSection />
       <FourthSection />
       <HomeProject />
+      <FAQSection />
       <HomeTastimonial />
     </div>
   );
