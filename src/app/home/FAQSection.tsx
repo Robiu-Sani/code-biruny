@@ -10,7 +10,7 @@ import {
   Server,
   Zap,
   ArrowRight,
-  ChevronDown,
+  //   ChevronDown,
   FileText,
   Cpu,
   Lock,
@@ -25,7 +25,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -217,41 +216,41 @@ export default function FAQSection() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="max-w-5xl space-y-4">
           {faqs.map((faq, index) => (
-            <Card key={index} className="overflow-hidden">
-              <AccordionItem value={`item-${index}`} className="border-0">
-                <AccordionTrigger className="hover:no-underline px-6 py-5">
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                      {faq.icon}
-                    </div>
-                    <h3 className="text-lg font-medium text-left">
-                      {faq.question}
-                    </h3>
-                  </div>
-                  <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 pt-0">
-                  <div className="space-y-4">
-                    <p className="text-muted-foreground">{faq.answer}</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {faq.details.map((detail, i) => (
-                        <div
-                          key={i}
-                          className="flex items-start space-x-3 bg-muted/50 p-3 rounded-lg"
-                        >
-                          <div className="bg-primary/10 p-1.5 rounded-full mt-0.5">
-                            {detail.icon}
-                          </div>
-                          <p className="text-sm">{detail.text}</p>
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-0"
+            >
+              <AccordionTrigger className="hover:no-underline px-6 py-5">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-primary/10 p-2 rounded-lg">{faq.icon}</div>
+                  <h3 className="text-lg font-medium text-left">
+                    {faq.question}
+                  </h3>
+                </div>
+                {/* <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" /> */}
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-6 pt-0">
+                <div className="space-y-4">
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {faq.details.map((detail, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start space-x-3 bg-muted/50 p-3 rounded-lg"
+                      >
+                        <div className="bg-primary/10 p-1.5 rounded-full mt-0.5">
+                          {detail.icon}
                         </div>
-                      ))}
-                    </div>
+                        <p className="text-sm">{detail.text}</p>
+                      </div>
+                    ))}
                   </div>
-                </AccordionContent>
-              </AccordionItem>
-            </Card>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
           ))}
         </Accordion>
 
