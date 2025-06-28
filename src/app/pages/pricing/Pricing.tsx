@@ -332,7 +332,7 @@ export default function Pricing() {
       </section>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 mt-16 text-center">
+      {/* <section className="container mx-auto px-4 mt-16 text-center">
         <div className="bg-muted/50 rounded-lg p-8 md:p-12">
           <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4">
             Still have questions?
@@ -348,7 +348,7 @@ export default function Pricing() {
             <Button variant="outline">Read Documentation</Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
