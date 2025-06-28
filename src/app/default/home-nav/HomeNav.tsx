@@ -210,6 +210,13 @@ export default function HomeNav() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link href="/pages/pricing">
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Pricing
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/pages/blog">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Blog
