@@ -21,11 +21,11 @@ import Link from "next/link";
 
 export default function RefundPolicy() {
   return (
-    <div className="min-h-screen mt-5 bg-zinc-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen mt-5 py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <Link
           href={`/`}
-          className="mb-6 text-zinc-600 flex justify-center item-center hover:text-zinc-900"
+          className="mb-6 text-muted-foreground flex justify-center item-center hover:text-foreground"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Home
@@ -33,28 +33,26 @@ export default function RefundPolicy() {
 
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
-            <BadgeDollarSign className="h-10 w-10 text-zinc-900 mr-3" />
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+            <BadgeDollarSign className="h-10 w-10 text-foreground mr-3" />
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               Code Biruni Refund Policy
             </h1>
           </div>
-          <p className="mt-6 text-lg leading-8 text-zinc-600">
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
             Our commitment to transparency and customer satisfaction
           </p>
         </div>
 
-        <Card className="mb-8 border-zinc-200">
+        <Card className="mb-8">
           <CardHeader>
             <CardTitle className="text-2xl flex items-center">
-              <ShieldCheck className="h-6 w-6 mr-2 text-zinc-700" />
+              <ShieldCheck className="h-6 w-6 mr-2" />
               Refund Policy Overview
             </CardTitle>
-            <CardDescription className="text-zinc-600">
-              Last updated: June 1, 2024
-            </CardDescription>
+            <CardDescription>Last updated: June 1, 2024</CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="mb-4 text-zinc-700">
+            <p className="mb-4 text-muted-foreground">
               At Code Biruni, we strive to deliver exceptional digital solutions
               that meet your business needs. However, we understand that
               sometimes circumstances may require refunds. Please review our
@@ -63,56 +61,56 @@ export default function RefundPolicy() {
 
             <div className="grid gap-6 mt-8">
               <div>
-                <h3 className="text-lg font-semibold text-zinc-800 mb-3 flex items-center">
-                  <Clock className="h-5 w-5 mr-2 text-zinc-600" />
+                <h3 className="text-lg font-semibold mb-3 flex items-center">
+                  <Clock className="h-5 w-5 mr-2" />
                   Digital Products Refund Timeline
                 </h3>
                 <div className="overflow-x-auto">
-                  <table className="min-w-full divide-y divide-zinc-200">
-                    <thead className="bg-zinc-100">
+                  <table className="min-w-full divide-y divide-border">
+                    <thead className="bg-muted">
                       <tr>
-                        <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">
+                        <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">
                           Service Type
                         </th>
-                        <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">
+                        <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">
                           Refund Period
                         </th>
-                        <th className="px-4 py-3 text-left text-xs font-medium text-zinc-500 uppercase tracking-wider">
+                        <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider">
                           Conditions
                         </th>
                       </tr>
                     </thead>
-                    <tbody className="bg-white divide-y divide-zinc-200">
+                    <tbody className="divide-y divide-border">
                       <tr>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-zinc-700">
+                        <td className="px-4 py-4 whitespace-nowrap text-sm">
                           Custom Software Development
                         </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-zinc-700">
+                        <td className="px-4 py-4 whitespace-nowrap text-sm">
                           14 days
                         </td>
-                        <td className="px-4 py-4 text-sm text-zinc-700">
+                        <td className="px-4 py-4 text-sm text-muted-foreground">
                           Before project development begins
                         </td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-zinc-700">
+                        <td className="px-4 py-4 whitespace-nowrap text-sm">
                           Website Development
                         </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-zinc-700">
+                        <td className="px-4 py-4 whitespace-nowrap text-sm">
                           7 days
                         </td>
-                        <td className="px-4 py-4 text-sm text-zinc-700">
+                        <td className="px-4 py-4 text-sm text-muted-foreground">
                           Before design approval
                         </td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-zinc-700">
+                        <td className="px-4 py-4 whitespace-nowrap text-sm">
                           Digital Products
                         </td>
-                        <td className="px-4 py-4 whitespace-nowrap text-sm text-zinc-700">
+                        <td className="px-4 py-4 whitespace-nowrap text-sm">
                           30 days
                         </td>
-                        <td className="px-4 py-4 text-sm text-zinc-700">
+                        <td className="px-4 py-4 text-sm text-muted-foreground">
                           Unused license keys
                         </td>
                       </tr>
@@ -121,13 +119,13 @@ export default function RefundPolicy() {
                 </div>
               </div>
 
-              <Separator className="my-6 bg-zinc-200" />
+              <Separator className="my-6" />
 
               <div>
-                <h3 className="text-lg font-semibold text-zinc-800 mb-3">
+                <h3 className="text-lg font-semibold mb-3">
                   Eligibility Conditions
                 </h3>
-                <ul className="space-y-3 text-zinc-700 list-disc pl-6">
+                <ul className="space-y-3 text-muted-foreground list-disc pl-6">
                   <li>
                     Refund requests must be made within the specified period
                     from the date of purchase
@@ -151,13 +149,13 @@ export default function RefundPolicy() {
                 </ul>
               </div>
 
-              <Separator className="my-6 bg-zinc-200" />
+              <Separator className="my-6" />
 
               <div>
-                <h3 className="text-lg font-semibold text-zinc-800 mb-3">
+                <h3 className="text-lg font-semibold mb-3">
                   Non-Refundable Items
                 </h3>
-                <ul className="space-y-3 text-zinc-700 list-disc pl-6">
+                <ul className="space-y-3 text-muted-foreground list-disc pl-6">
                   <li>Consultation fees after the consultation has occurred</li>
                   <li>Custom development work that has been completed</li>
                   <li>
@@ -171,76 +169,66 @@ export default function RefundPolicy() {
           </CardContent>
         </Card>
 
-        <Card className="border-zinc-200">
+        <Card>
           <CardHeader>
-            <CardTitle className="text-2xl text-zinc-800">
-              Refund Process
-            </CardTitle>
+            <CardTitle className="text-2xl">Refund Process</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <div className="flex items-center">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-zinc-100 text-zinc-800 mr-3">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-foreground mr-3">
                     1
                   </div>
-                  <h4 className="font-medium text-zinc-800">
-                    Request Submission
-                  </h4>
+                  <h4 className="font-medium">Request Submission</h4>
                 </div>
-                <p className="text-zinc-600 text-sm">
+                <p className="text-muted-foreground text-sm">
                   Submit your refund request via email to support@codebiruny.com
                   with your order details.
                 </p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-zinc-100 text-zinc-800 mr-3">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-foreground mr-3">
                     2
                   </div>
-                  <h4 className="font-medium text-zinc-800">Review Process</h4>
+                  <h4 className="font-medium">Review Process</h4>
                 </div>
-                <p className="text-zinc-600 text-sm">
+                <p className="text-muted-foreground text-sm">
                   Our team will review your request within 3-5 business days and
                   may contact you for additional information.
                 </p>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-zinc-100 text-zinc-800 mr-3">
+                  <div className="flex items-center justify-center h-10 w-10 rounded-full bg-muted text-foreground mr-3">
                     3
                   </div>
-                  <h4 className="font-medium text-zinc-800">Refund Issuance</h4>
+                  <h4 className="font-medium">Refund Issuance</h4>
                 </div>
-                <p className="text-zinc-600 text-sm">
+                <p className="text-muted-foreground text-sm">
                   Approved refunds will be processed within 10 business days to
                   your original payment method.
                 </p>
               </div>
             </div>
           </CardContent>
-          <CardFooter className="bg-zinc-50 rounded-b-lg">
+          <CardFooter className="bg-muted/50 rounded-b-lg">
             <div className="w-full">
-              <h3 className="text-lg font-semibold text-zinc-800 mb-3 flex items-center">
-                <Mail className="h-5 w-5 mr-2 text-zinc-600" />
+              <h3 className="text-lg font-semibold mb-3 flex items-center">
+                <Mail className="h-5 w-5 mr-2" />
                 Need Help?
               </h3>
-              <p className="text-zinc-600 mb-4">
+              <p className="text-muted-foreground mb-4">
                 Contact our support team for any questions about our refund
                 policy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  variant="outline"
-                  className="text-zinc-700 border-zinc-300"
-                >
+                <Button variant="outline">
                   <Mail className="h-4 w-4 mr-2" />
                   Email Support
                 </Button>
-                <Button
-                  variant="outline"
-                  className="text-zinc-700 border-zinc-300"
-                >
+                <Button variant="outline">
                   <Phone className="h-4 w-4 mr-2" />
                   Call Support
                 </Button>
@@ -249,7 +237,7 @@ export default function RefundPolicy() {
           </CardFooter>
         </Card>
 
-        <div className="mt-12 text-center text-sm text-zinc-500">
+        <div className="mt-12 text-center text-sm text-muted-foreground">
           <p>
             Code Biruni reserves the right to modify this refund policy at any
             time. Changes will be posted on this page.
