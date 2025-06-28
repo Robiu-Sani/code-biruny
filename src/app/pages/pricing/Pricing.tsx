@@ -102,9 +102,9 @@ export default function Pricing() {
   ];
 
   return (
-    <div className="w-full py-12 md:py-24">
+    <div className="container mx-auto py-12 md:py-24">
       {/* Banner Section */}
-      <section className="container mx-auto px-4 mb-16">
+      <section className=" px-4 mb-16">
         <div className="text-center max-w-3xl mx-auto">
           <Badge variant="outline" className="mb-4">
             <BadgeCheck className="h-3 w-3 mr-2" />

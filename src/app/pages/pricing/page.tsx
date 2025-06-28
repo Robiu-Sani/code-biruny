@@ -3,7 +3,7 @@ import Pricing from "./Pricing";
 
 export default function page() {
   return (
-    <div className="container mx-atuo">
+    <div className="w-full flex justify-center items-center mx-atuo">
       <Pricing />
     </div>
   );
